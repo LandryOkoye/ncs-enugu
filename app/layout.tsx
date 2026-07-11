@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const delightFallback = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-delight",
 });
 
 export const metadata: Metadata = {
-  title: "Effie Awards Switzerland",
-  description: "Awarding ideas that work.",
+  title: "NCS Awards Enugu",
+  // description: "Awarding ideas that work.",
 };
 
 export default function RootLayout({
@@ -18,14 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} scroll-smooth`}>
+    <html lang="en" className={`${delightFallback.variable} scroll-smooth`}>
       <body className="flex flex-col min-h-screen font-sans bg-[#070707] text-white">
         <nav className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl bg-white rounded-full px-8 py-4 z-50 flex justify-between items-center shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 border border-white/20">
-          <a href="#" className="font-bold text-xl flex items-center gap-2 text-black">
-            <span><span className="font-bold">NCS-</span> <span className="font-light">Enugu-Awards</span></span>
-            <div className="w-6 h-6 bg-[#c59d5f] rounded-full flex items-center justify-center">
-              <span className="text-white text-xs block" style={{ transform: "scale(1.2)" }}>🐻</span>
-            </div>
+          <a href="#" className="flex items-center">
+            <img src="/logo.png" alt="NCS Enugu Awards" className="h-12 w-auto object-contain" />
           </a>
 
           <div className="hidden md:flex items-center gap-8">

@@ -5,4 +5,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- END:nextjs-agent-rules -->
 
 
-For UIUX designs use the UIUX Pro Max Skil = /ui-ux-pro-max
+For UIUX designs use the UIUX Pro Max Skill = /ui-ux-pro-max
+
+
+<!-- light color #efe5d2 -->

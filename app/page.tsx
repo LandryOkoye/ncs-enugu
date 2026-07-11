@@ -1,25 +1,55 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, MapPin, Mail, Plus } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
   return (
     <>
       {/* Section 1: Hero */}
       <section id="home" className="min-h-screen bg-[#070707] text-white px-[10%] pt-40 pb-40 flex items-center relative angle-bottom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full items-center z-10 max-w-7xl mx-auto">
-          <div>
-            <h1 className="text-6xl md:text-[5.5rem] font-light leading-[1.05] tracking-tight">
+          <motion.div 
+            initial="hidden" 
+            animate="visible" 
+            variants={staggerContainer}
+          >
+            <motion.h1 variants={fadeInUp} className="text-6xl md:text-[5.5rem] font-light leading-[1.05] tracking-tight">
               Awarding<br />
               ideas<br />
               that<br />
               work
-            </h1>
-            <p className="mt-12 text-gray-400 max-w-xl text-lg font-light leading-relaxed">
+            </motion.h1>
+            <motion.p variants={fadeInUp} className="mt-12 text-gray-400 max-w-xl text-lg font-light leading-relaxed">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
               Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
               Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
-            </p>
-          </div>
-          <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-md aspect-square bg-gradient-gold gold-shape-placeholder shadow-[-20px_20px_60px_rgba(0,0,0,0.5)] transform hover:scale-105 transition-transform duration-700 ease-out"></div>
-          </div>
+            </motion.p>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="flex justify-center lg:justify-end"
+          >
+            <img src="/NCS 3.png" alt="NCS Awards" className="w-full max-w-xs object-contain transform hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_20px_40px_rgba(197,157,95,0.2)]" />
+          </motion.div>
         </div>
       </section>
 
@@ -28,66 +58,97 @@ export default function Home() {
         <div className="absolute inset-0 bg-lines pointer-events-none"></div>
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-            <div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+            >
               <h2 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight sticky top-40">
                 What<br />
                 counts in<br />
                 Lorem Ipsum
               </h2>
-            </div>
-            <div className="pt-4">
-              <p className="text-gray-600 max-w-xl text-xl font-light leading-relaxed mb-10">
+            </motion.div>
+            <motion.div 
+              className="pt-4"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
+              <motion.p variants={fadeInUp} className="text-gray-600 max-w-xl text-xl font-light leading-relaxed mb-10">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                 Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
                 pellentesque eu, pretium quis, sem.
                 <br /><br />
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.              </p>
-              <button className="inline-flex items-center gap-4 bg-black text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide uppercase hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] transition-all">
-                <span className="w-8 h-8 rounded-full bg-[#c59d5f] flex items-center justify-center text-white">→</span>
-                Lorem Ipsum
-              </button>
-            </div>
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.              
+              </motion.p>
+              <motion.div variants={fadeInUp}>
+                <Button variant="premium" size="premium" className="group">
+                  <span className="w-8 h-8 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                  <span className="relative z-10">Lorem Ipsum</span>
+                </Button>
+              </motion.div>
+            </motion.div>
           </div>
 
           {/* Logos Row */}
-          <div className="mt-32 pt-16 border-t border-black/10">
-            <h3 className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Our Partners</h3>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="mt-32 pt-16 border-t border-black/10"
+          >
+            <motion.h3 variants={fadeInUp} className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Our Partners</motion.h3>
             <div className="flex flex-wrap items-center gap-12 lg:gap-20 opacity-80">
-              <div className="text-2xl font-bold font-sans grayscale hover:grayscale-0 transition-all cursor-pointer">m&k</div>
-              <div className="text-xl font-bold border-2 border-black p-1 leading-none text-center grayscale hover:grayscale-0 transition-all cursor-pointer"><span className="block border-b-2 border-black pb-1 mb-1">SWA</span>ASA</div>
-              <div className="text-2xl font-bold text-blue-600 flex items-center gap-1 grayscale hover:grayscale-0 transition-all cursor-pointer"><span className="text-white bg-blue-600 w-6 h-6 flex items-center justify-center rounded-sm text-sm">20</span> Minuten</div>
-              <div className="text-2xl text-emerald-500 font-light flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-pointer">
-                <div className="w-6 h-6 border-[3px] border-emerald-500 rounded-sm relative"><div className="absolute inset-[3px] bg-emerald-500 rounded-sm"></div></div> Livesystems
-              </div>
-              <div className="flex items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-pointer">
-                <div className="bg-yellow-400 w-6 h-6 rounded-sm font-bold flex items-center justify-center text-xs text-black">P</div>
-                <div className="text-xs font-bold leading-tight">Swiss Post<br />Advertising</div>
-              </div>
+              {['m&k', 'SWA ASA', '20 Minuten', 'Livesystems', 'Swiss Post'].map((partner) => (
+                <motion.div 
+                  key={partner}
+                  variants={fadeInUp}
+                  whileHover={{ scale: 1.1, filter: 'grayscale(0%)' }}
+                  className="grayscale transition-all cursor-pointer font-bold text-xl"
+                >
+                  {partner}
+                </motion.div>
+              ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Section 3: Timeline / Year */}
       <section className="min-h-[80vh] bg-[#070707] text-white px-[10%] pt-40 pb-32 flex items-center relative angle-top overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full z-10 relative max-w-7xl mx-auto">
-          <div className="pt-20">
-            <h2 className="text-4xl md:text-6xl font-light mb-6">
+          <motion.div 
+            className="pt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeInUp} className="text-4xl md:text-6xl font-light mb-6">
               20<span className="text-[#c59d5f]">26</span> NCS Enugu Awards
-            </h2>
-            <p className="text-gray-400 max-w-xl text-lg font-light leading-relaxed mb-10">
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-gray-400 max-w-xl text-lg font-light leading-relaxed mb-10">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
               Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-
-            </p>
-            <button className="inline-flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-semibold text-sm tracking-wide uppercase hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(255,255,255,0.1)] transition-all">
-              <span className="w-8 h-8 rounded-full bg-[#c59d5f] flex items-center justify-center text-white">→</span>
-              LEARN MORE
-            </button>
+            </motion.p>
+            <motion.div variants={fadeInUp}>
+              <Button variant="premiumLight" size="premium" className="group">
+                <span className="w-8 h-8 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+                <span className="relative z-10">LEARN MORE</span>
+              </Button>
+            </motion.div>
 
             {/* Timeline component */}
-            <div className="mt-32 relative max-w-2xl">
+            <motion.div variants={fadeInUp} className="mt-32 relative max-w-2xl">
               <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/20 -translate-y-1/2"></div>
               <div className="flex justify-between relative z-10">
                 {/* Item 1 */}
@@ -123,11 +184,17 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           <div className="relative h-full min-h-[500px] hidden lg:block">
-            <div className="absolute right-[-20%] top-[10%] w-[120%] h-[120%] bg-gradient-gold gold-shape-2 shadow-[-20px_20px_60px_rgba(0,0,0,0.5)]"></div>
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="absolute right-[-20%] top-[10%] w-[120%] h-[120%] bg-gradient-gold gold-shape-2 shadow-[-20px_20px_60px_rgba(0,0,0,0.5)]"
+            ></motion.div>
           </div>
         </div>
       </section>
@@ -135,127 +202,153 @@ export default function Home() {
       {/* Section 4: Nominees (New) */}
       <section id="nominees" className="py-40 bg-[#0a0a0a] text-white px-[10%] border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
-            <h2 className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4">The Best of 2024/2025</h2>
-            <h3 className="text-5xl md:text-6xl font-light">Featured Nominees</h3>
-          </div>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="text-center mb-24"
+          >
+            <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-delight italic">The Best of 2024/2025</motion.h2>
+            <motion.h3 variants={fadeInUp} className="text-5xl md:text-6xl font-light">Featured Nominees</motion.h3>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="group relative overflow-hidden rounded-2xl bg-[#111] border border-white/5 hover:border-white/20 transition-all duration-500 cursor-pointer">
-              <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-white/10 text-9xl font-bold">01</div>
-              </div>
-              <div className="p-8 relative z-10">
-                <div className="text-[#c59d5f] text-xs font-bold tracking-widest mb-2 uppercase">Brand Activation</div>
-                <h4 className="text-2xl font-light mb-4 text-white group-hover:text-[#c59d5f] transition-colors">The Digital Leap</h4>
-                <p className="text-gray-400 font-light text-sm line-clamp-2">An innovative campaign that redefined digital engagement for modern audiences in Switzerland.</p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group relative overflow-hidden rounded-2xl bg-[#111] border border-white/5 hover:border-white/20 transition-all duration-500 cursor-pointer md:-translate-y-8">
-              <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-white/10 text-9xl font-bold">02</div>
-              </div>
-              <div className="p-8 relative z-10">
-                <div className="text-[#c59d5f] text-xs font-bold tracking-widest mb-2 uppercase">Social Good</div>
-                <h4 className="text-2xl font-light mb-4 text-white group-hover:text-[#c59d5f] transition-colors">Sustainable Future</h4>
-                <p className="text-gray-400 font-light text-sm line-clamp-2">Driving real environmental change through powerful storytelling and community action.</p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group relative overflow-hidden rounded-2xl bg-[#111] border border-white/5 hover:border-white/20 transition-all duration-500 cursor-pointer">
-              <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-white/10 text-9xl font-bold">03</div>
-              </div>
-              <div className="p-8 relative z-10">
-                <div className="text-[#c59d5f] text-xs font-bold tracking-widest mb-2 uppercase">Innovation</div>
-                <h4 className="text-2xl font-light mb-4 text-white group-hover:text-[#c59d5f] transition-colors">Beyond Reality</h4>
-                <p className="text-gray-400 font-light text-sm line-clamp-2">Merging physical and virtual worlds for a groundbreaking product launch experience.</p>
-              </div>
-            </div>
+            {[
+              { num: "01", cat: "Brand Activation", title: "The Digital Leap", desc: "An innovative campaign that redefined digital engagement for modern audiences in Switzerland." },
+              { num: "02", cat: "Social Good", title: "Sustainable Future", desc: "Driving real environmental change through powerful storytelling and community action.", offset: true },
+              { num: "03", cat: "Innovation", title: "Beyond Reality", desc: "Merging physical and virtual worlds for a groundbreaking product launch experience." }
+            ].map((nominee, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: nominee.offset ? -32 : 0 }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ y: (nominee.offset ? -32 : 0) - 10 }}
+                className="group relative overflow-hidden rounded-2xl bg-[#111] border border-white/5 hover:border-white/20 transition-all duration-500 cursor-pointer"
+              >
+                <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 flex items-center justify-center text-white/10 text-9xl font-bold transition-transform duration-700 group-hover:scale-110">{nominee.num}</div>
+                </div>
+                <div className="p-8 relative z-10">
+                  <div className="text-[#c59d5f] text-xs font-bold tracking-widest mb-2 uppercase">{nominee.cat}</div>
+                  <h4 className="text-2xl font-light mb-4 text-white group-hover:text-[#c59d5f] transition-colors">{nominee.title}</h4>
+                  <p className="text-gray-400 font-light text-sm line-clamp-2">{nominee.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
-          <div className="mt-20 text-center">
+          <motion.div 
+            initial={{ opacity: 0 }} 
+            whileInView={{ opacity: 1 }} 
+            transition={{ delay: 0.8 }}
+            className="mt-20 text-center"
+          >
             <button className="text-white hover:text-[#c59d5f] font-semibold text-sm tracking-widest uppercase transition-colors border-b border-white/20 hover:border-[#c59d5f] pb-1">
               View All Nominees
             </button>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Section 5: FAQ (New) */}
       <section id="faq" className="py-40 bg-white text-black px-[10%]">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-20">
-            <h3 className="text-5xl md:text-6xl font-light mb-6">Frequently Asked</h3>
-            <p className="text-gray-500 text-lg font-light">Everything you need to know about the Effie Awards.</p>
-          </div>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="mb-20"
+          >
+            <motion.h3 variants={fadeInUp} className="text-5xl md:text-6xl font-light mb-6">Frequently Asked</motion.h3>
+            <motion.p variants={fadeInUp} className="text-gray-500 text-lg font-light">Everything you need to know about the Effie Awards.</motion.p>
+          </motion.div>
 
-          <div className="divide-y divide-black/10">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="divide-y divide-black/10"
+          >
             {[
               { q: "Who can enter the Effie Awards?", a: "Any marketing campaign that ran in Switzerland during the qualifying period is eligible, provided it demonstrates proven results." },
               { q: "What is the judging criteria?", a: "Entries are evaluated on four pillars: Strategic Challenge (20%), Creative Idea (20%), Bringing the Idea to Life (20%), and Results (40%)." },
               { q: "When is the entry deadline?", a: "The final deadline for all 2026 entries is June 1st, 2026. Early bird rates apply until April 15th." },
               { q: "How are the winners announced?", a: "Finalists are announced in July, with Bronze and Silver winners revealed in September. Gold and Grand Effie winners are exclusively announced at the Award Night in November." }
             ].map((faq, i) => (
-              <div key={i} className="py-8 group cursor-pointer">
+              <motion.div variants={fadeInUp} key={i} className="py-8 group cursor-pointer">
                 <div className="flex justify-between items-center">
                   <h4 className="text-2xl font-light group-hover:text-[#b38b4d] transition-colors">{faq.q}</h4>
-                  <div className="w-8 h-8 rounded-full border border-black/20 flex items-center justify-center group-hover:border-[#b38b4d] group-hover:bg-[#b38b4d] group-hover:text-white transition-all text-xl font-light">+</div>
+                  <div className="w-8 h-8 rounded-full border border-black/20 flex items-center justify-center group-hover:border-[#b38b4d] group-hover:bg-[#b38b4d] group-hover:text-white transition-all text-xl font-light">
+                    <Plus className="w-4 h-4" />
+                  </div>
                 </div>
-                {/* In a real app, this would be an accordion. For visual demo, we show the first one open */}
                 <div className={`mt-6 text-gray-600 font-light leading-relaxed max-w-3xl ${i === 0 ? 'block' : 'hidden'}`}>
                   {faq.a}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Section 6: Contact (New) */}
       <section id="contact" className="py-40 bg-[#070707] text-white px-[10%] relative overflow-hidden">
         {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#c59d5f] rounded-full opacity-[0.03] blur-[100px] pointer-events-none"></div>
+        <motion.div 
+          animate={{ scale: [1, 1.1, 1], opacity: [0.03, 0.05, 0.03] }} 
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#c59d5f] rounded-full blur-[100px] pointer-events-none"
+        ></motion.div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
-          <div>
-            <h2 className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4">Get in Touch</h2>
-            <h3 className="text-5xl md:text-7xl font-light leading-[1.1] mb-8">Ready to submit<br />your work?</h3>
-            <p className="text-gray-400 font-light text-xl mb-12 max-w-md">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-delight italic">Get in Touch</motion.h2>
+            <motion.h3 variants={fadeInUp} className="text-5xl md:text-7xl font-light leading-[1.1] mb-8">Ready to submit<br />your work?</motion.h3>
+            <motion.p variants={fadeInUp} className="text-gray-400 font-light text-xl mb-12 max-w-md">
               Have questions about the entry process, judging, or sponsorship opportunities? Our team is here to help.
-            </p>
+            </motion.p>
 
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                  <span className="text-xl">📍</span>
+            <motion.div variants={fadeInUp} className="space-y-8">
+              <div className="flex items-start gap-4 group">
+                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f]/20 transition-colors">
+                  <MapPin className="w-5 h-5 text-[#c59d5f]" />
                 </div>
                 <div>
-                  <h5 className="font-semibold mb-1">Office</h5>
+                  <h5 className="font-semibold mb-1 group-hover:text-[#c59d5f] transition-colors">Office</h5>
                   <p className="text-gray-500 font-light">Zurich, Switzerland</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                  <span className="text-xl">✉️</span>
+              <div className="flex items-start gap-4 group">
+                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f]/20 transition-colors">
+                  <Mail className="w-5 h-5 text-[#c59d5f]" />
                 </div>
                 <div>
-                  <h5 className="font-semibold mb-1">Email</h5>
+                  <h5 className="font-semibold mb-1 group-hover:text-[#c59d5f] transition-colors">Email</h5>
                   <p className="text-gray-500 font-light">contact@effie-switzerland.ch</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="bg-[#111] p-10 md:p-14 rounded-3xl border border-white/5 shadow-2xl">
-            <form className="space-y-8">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="bg-[#111] p-10 md:p-14 rounded-3xl border border-white/5 shadow-2xl relative"
+          >
+            <form className="space-y-8 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-bold tracking-widest text-gray-400 uppercase">First Name</label>
@@ -274,11 +367,15 @@ export default function Home() {
                 <label className="text-xs font-bold tracking-widest text-gray-400 uppercase">Message</label>
                 <textarea rows={4} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#c59d5f] transition-colors resize-none" placeholder="How can we help you?"></textarea>
               </div>
-              <button className="w-full bg-white text-black py-4 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-[#c59d5f] hover:text-white transition-colors mt-4">
-                Send Message
-              </button>
+              
+              <Button variant="premiumLight" size="premium" className="w-full mt-4 group justify-center">
+                <span className="relative z-10">SEND MESSAGE</span>
+                <span className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center text-black relative z-10 ml-2 transition-transform group-hover:translate-x-1">
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </Button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
