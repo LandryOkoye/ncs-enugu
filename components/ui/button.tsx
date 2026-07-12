@@ -73,7 +73,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           whileTap={{ scale: 0.98 }}
           {...(props as React.ComponentPropsWithoutRef<typeof motion.button>)}
         >
-          <span className={`absolute inset-0 w-full h-full ${fillerColor} scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0 rounded-full`}></span>
           <span className="relative z-10 flex items-center justify-center gap-4 group-hover:text-white transition-colors duration-500">
             {children}
           </span>

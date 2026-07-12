@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Climate_Crisis, Geist } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
+const climateCrisis = Climate_Crisis({
+  subsets: ["latin"],
+  variable: "--font-climate",
+});
 
 const delightFallback = Playfair_Display({
   subsets: ["latin"],
@@ -18,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${delightFallback.variable} scroll-smooth`}>
+    <html lang="en" className={cn("scroll-smooth", climateCrisis.variable, delightFallback.variable, "font-sans", geist.variable)}>
       <body className="flex flex-col min-h-screen font-sans bg-[#070707] text-white">
         <nav className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl bg-white rounded-full px-8 py-4 z-50 flex justify-between items-center shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 border border-white/20">
           <a href="#" className="flex items-center">

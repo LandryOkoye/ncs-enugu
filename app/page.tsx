@@ -25,9 +25,9 @@ export default function Home() {
       {/* Section 1: Hero */}
       <section id="home" className="min-h-screen bg-[#070707] text-white px-[10%] pt-40 pb-40 flex items-center relative angle-bottom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full items-center z-10 max-w-7xl mx-auto">
-          <motion.div 
-            initial="hidden" 
-            animate="visible" 
+          <motion.div
+            initial="hidden"
+            animate="visible"
             variants={staggerContainer}
           >
             <motion.h1 variants={fadeInUp} className="text-6xl md:text-[5.5rem] font-light leading-[1.05] tracking-tight">
@@ -37,14 +37,15 @@ export default function Home() {
               work
             </motion.h1>
             <motion.p variants={fadeInUp} className="mt-12 text-gray-400 max-w-xl text-lg font-light leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-              Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+              The Nigeria Computer Society (NCS), Enugu State Chapter, presents the maiden edition of the
+              NCS Enugu Innovation & Impact Awards 2026, a ﬂagship recognition and ecosystem
+              engagement platform established to celebrate excellence, innovation, leadership, and impact
+              within the technology ecosystem.
             </motion.p>
           </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }} 
-            animate={{ opacity: 1, scale: 1 }} 
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex justify-center lg:justify-end"
           >
@@ -65,12 +66,12 @@ export default function Home() {
               variants={fadeInUp}
             >
               <h2 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight sticky top-40">
-                What<br />
-                counts in<br />
-                Lorem Ipsum
+                Why<br />
+                NCS EIIA<br />
+                2026
               </h2>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="pt-4"
               initial="hidden"
               whileInView="visible"
@@ -78,17 +79,17 @@ export default function Home() {
               variants={staggerContainer}
             >
               <motion.p variants={fadeInUp} className="text-gray-600 max-w-xl text-xl font-light leading-relaxed mb-10">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                pellentesque eu, pretium quis, sem.
+                Enugu's technology ecosystem is growing rapidly, supported by organizations like Genesys Tech Hub, Digital Dreams, Roar Nigeria Hub, and BlockchainHub Africa. However, the individuals and institutions driving this innovation remain largely under-recognized. There is a clear need for a credible platform to celebrate their contributions, highlight their impact, and inspire future generations.
                 <br /><br />
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.              
+                The NCS Enugu Innovation & Impact Awards 2026 was conceived to address this gap by
+                recognizing those who continue to contribute to technology advancement, innovation, education,
+                digital transformation, research, entrepreneurship, and ecosystem development
               </motion.p>
               <motion.div variants={fadeInUp}>
-                <Button variant="premium" size="premium" className="group">
-                  <span className="w-8 h-8 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
-                    <ArrowRight className="w-4 h-4" />
+                <Button variant="premium" size="premium" className="group overflow-hidden relative">
+                  <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
+                    <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
+                    <ArrowRight className="w-5 h-5 relative z-10" />
                   </span>
                   <span className="relative z-10">Lorem Ipsum</span>
                 </Button>
@@ -97,7 +98,7 @@ export default function Home() {
           </div>
 
           {/* Logos Row */}
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -107,7 +108,7 @@ export default function Home() {
             <motion.h3 variants={fadeInUp} className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Our Partners</motion.h3>
             <div className="flex flex-wrap items-center gap-12 lg:gap-20 opacity-80">
               {['m&k', 'SWA ASA', '20 Minuten', 'Livesystems', 'Swiss Post'].map((partner) => (
-                <motion.div 
+                <motion.div
                   key={partner}
                   variants={fadeInUp}
                   whileHover={{ scale: 1.1, filter: 'grayscale(0%)' }}
@@ -124,7 +125,7 @@ export default function Home() {
       {/* Section 3: Timeline / Year */}
       <section className="min-h-[80vh] bg-[#070707] text-white px-[10%] pt-40 pb-32 flex items-center relative angle-top overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full z-10 relative max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="pt-20"
             initial="hidden"
             whileInView="visible"
@@ -139,9 +140,10 @@ export default function Home() {
               Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             </motion.p>
             <motion.div variants={fadeInUp}>
-              <Button variant="premiumLight" size="premium" className="group">
-                <span className="w-8 h-8 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
-                  <ArrowRight className="w-4 h-4" />
+              <Button variant="premiumLight" size="premium" className="group overflow-hidden relative">
+                <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
+                  <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
+                  <ArrowRight className="w-5 h-5 relative z-10" />
                 </span>
                 <span className="relative z-10">LEARN MORE</span>
               </Button>
@@ -187,14 +189,16 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          <div className="relative h-full min-h-[500px] hidden lg:block">
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+          <div className="relative h-full min-h-[500px] hidden lg:flex items-center justify-end">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="absolute right-[-20%] top-[10%] w-[120%] h-[120%] bg-gradient-gold gold-shape-2 shadow-[-20px_20px_60px_rgba(0,0,0,0.5)]"
-            ></motion.div>
+              className="w-full flex justify-end"
+            >
+              <img src="/NCS 2.png" alt="2026 NCS Enugu Awards" className="w-full max-w-md object-contain transform hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_20px_40px_rgba(197,157,95,0.2)]" />
+            </motion.div>
           </div>
         </div>
       </section>
@@ -202,14 +206,14 @@ export default function Home() {
       {/* Section 4: Nominees (New) */}
       <section id="nominees" className="py-40 bg-[#0a0a0a] text-white px-[10%] border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
             className="text-center mb-24"
           >
-            <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-delight italic">The Best of 2024/2025</motion.h2>
+            <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-secondary italic">The Best of 2026</motion.h2>
             <motion.h3 variants={fadeInUp} className="text-5xl md:text-6xl font-light">Featured Nominees</motion.h3>
           </motion.div>
 
@@ -219,7 +223,7 @@ export default function Home() {
               { num: "02", cat: "Social Good", title: "Sustainable Future", desc: "Driving real environmental change through powerful storytelling and community action.", offset: true },
               { num: "03", cat: "Innovation", title: "Beyond Reality", desc: "Merging physical and virtual worlds for a groundbreaking product launch experience." }
             ].map((nominee, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: nominee.offset ? -32 : 0 }}
@@ -241,9 +245,9 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            whileInView={{ opacity: 1 }} 
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
             className="mt-20 text-center"
           >
@@ -257,7 +261,7 @@ export default function Home() {
       {/* Section 5: FAQ (New) */}
       <section id="faq" className="py-40 bg-white text-black px-[10%]">
         <div className="max-w-4xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -268,7 +272,7 @@ export default function Home() {
             <motion.p variants={fadeInUp} className="text-gray-500 text-lg font-light">Everything you need to know about the Effie Awards.</motion.p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -300,8 +304,8 @@ export default function Home() {
       {/* Section 6: Contact (New) */}
       <section id="contact" className="py-40 bg-[#070707] text-white px-[10%] relative overflow-hidden">
         {/* Subtle background glow */}
-        <motion.div 
-          animate={{ scale: [1, 1.1, 1], opacity: [0.03, 0.05, 0.03] }} 
+        <motion.div
+          animate={{ scale: [1, 1.1, 1], opacity: [0.03, 0.05, 0.03] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#c59d5f] rounded-full blur-[100px] pointer-events-none"
         ></motion.div>
@@ -313,7 +317,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-delight italic">Get in Touch</motion.h2>
+            <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-secondary italic">Get in Touch</motion.h2>
             <motion.h3 variants={fadeInUp} className="text-5xl md:text-7xl font-light leading-[1.1] mb-8">Ready to submit<br />your work?</motion.h3>
             <motion.p variants={fadeInUp} className="text-gray-400 font-light text-xl mb-12 max-w-md">
               Have questions about the entry process, judging, or sponsorship opportunities? Our team is here to help.
@@ -341,7 +345,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -367,11 +371,12 @@ export default function Home() {
                 <label className="text-xs font-bold tracking-widest text-gray-400 uppercase">Message</label>
                 <textarea rows={4} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#c59d5f] transition-colors resize-none" placeholder="How can we help you?"></textarea>
               </div>
-              
-              <Button variant="premiumLight" size="premium" className="w-full mt-4 group justify-center">
+
+              <Button variant="premiumLight" size="premium" className="w-full mt-4 group justify-center overflow-hidden relative">
                 <span className="relative z-10">SEND MESSAGE</span>
-                <span className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center text-black relative z-10 ml-2 transition-transform group-hover:translate-x-1">
-                  <ArrowRight className="w-4 h-4" />
+                <span className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center text-black relative z-10 ml-2 transition-transform group-hover:translate-x-1">
+                  <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[30] transition-transform duration-700 ease-out z-[-1]"></span>
+                  <ArrowRight className="w-5 h-5 relative z-10 group-hover:text-white transition-colors duration-500" />
                 </span>
               </Button>
             </form>
