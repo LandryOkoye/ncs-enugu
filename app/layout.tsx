@@ -3,7 +3,7 @@ import { Playfair_Display, Climate_Crisis, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const climateCrisis = Climate_Crisis({
   subsets: ["latin"],
@@ -59,7 +59,7 @@ export default function RootLayout({
                 <span><span className="font-bold">NCS</span> <span className="font-light">Awards Enugu</span></span>
               </div>
               <p className="text-gray-500 max-w-sm text-base font-light leading-relaxed">
-                Recognizing marketing effectiveness and proof of successful marketing. The national Oscar for the communication industry.
+                Recognizing Excellence, <br />Driving Impact, <br />Connecting Leaders
               </p>
             </div>
             <div className="col-span-1 md:col-span-3">

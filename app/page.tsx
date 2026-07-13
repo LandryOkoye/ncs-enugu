@@ -98,32 +98,30 @@ export default function Home() {
           </div>
 
           {/* Logos Row */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="mt-32 pt-16 border-t border-black/10"
-          >
-            <motion.h3 variants={fadeInUp} className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Our Partners</motion.h3>
-            <div className="flex flex-wrap items-center gap-12 lg:gap-20 opacity-80">
-              {['m&k', 'SWA ASA', '20 Minuten', 'Livesystems', 'Swiss Post'].map((partner) => (
-                <motion.div
-                  key={partner}
-                  variants={fadeInUp}
-                  whileHover={{ scale: 1.1, filter: 'grayscale(0%)' }}
-                  className="grayscale transition-all cursor-pointer font-bold text-xl"
-                >
-                  {partner}
-                </motion.div>
-              ))}
+          <div className="mt-32 pt-16 border-t border-black/10 overflow-hidden">
+            <h3 className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Our Partners</h3>
+            <div className="relative w-full flex items-center">
+              <motion.div
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{ ease: "linear", duration: 15, repeat: Infinity }}
+                className="flex items-center gap-12 lg:gap-20 opacity-80 whitespace-nowrap w-max"
+              >
+                {[...['m&k', 'SWA ASA', '20 Minuten', 'Livesystems', 'Swiss Post', 'Genesys', 'Digital Dreams'], ...['m&k', 'SWA ASA', '20 Minuten', 'Livesystems', 'Swiss Post', 'Genesys', 'Digital Dreams']].map((partner, index) => (
+                  <div
+                    key={`${partner}-${index}`}
+                    className="grayscale hover:grayscale-0 transition-all cursor-pointer font-bold text-xl hover:scale-110"
+                  >
+                    {partner}
+                  </div>
+                ))}
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Section 3: Timeline / Year */}
-      <section className="min-h-[80vh] bg-[#070707] text-white px-[10%] pt-40 pb-32 flex items-center relative angle-top overflow-hidden">
+      <section className="min-h-[80vh] bg-[#070707] text-white px-[10%] pt-40 pb-32 flex items-center relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full z-10 relative max-w-7xl mx-auto">
           <motion.div
             className="pt-20"
@@ -159,7 +157,7 @@ export default function Home() {
                   <div className="mb-4 pr-4">
                     <div className="text-lg font-light mb-1 text-white/90">Finalist<br />announcement</div>
                   </div>
-                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">13. JUL 2026</div>
+                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">AUG 2026</div>
                   <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
                     <div className="w-3 h-3 bg-black rounded-full"></div>
                   </div>
@@ -170,7 +168,7 @@ export default function Home() {
                   <div className="mt-4 pr-4">
                     <div className="text-lg font-light mt-1 max-w-[150px] text-white/90">Bronze and<br />silver winners<br />announcement</div>
                   </div>
-                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mt-3">03. SEP 2026</div>
+                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mt-3">AUG 2026</div>
                   <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
                     <div className="w-3 h-3 bg-black rounded-full"></div>
                   </div>
@@ -181,7 +179,7 @@ export default function Home() {
                   <div className="mb-4">
                     <div className="text-lg font-light mb-1 text-white/90">Award Night</div>
                   </div>
-                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">19. NOV 2026</div>
+                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">AUG 2026</div>
                   <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
                     <div className="w-3 h-3 bg-[#c59d5f] rounded-full shadow-[0_0_15px_#c59d5f]"></div>
                   </div>
@@ -288,7 +286,7 @@ export default function Home() {
             ].map((faq, i) => (
               <motion.div variants={fadeInUp} key={i} className="py-8 group cursor-pointer">
                 <div className="flex justify-between items-center">
-                  <h4 className="text-2xl font-light group-hover:text-[#b38b4d] transition-colors">{faq.q}</h4>
+                  <h4 className="text-2xl  group-hover:text-[#b38b4d] transition-colors">{faq.q}</h4>
                   <div className="w-8 h-8 rounded-full border border-black/20 flex items-center justify-center group-hover:border-[#b38b4d] group-hover:bg-[#b38b4d] group-hover:text-white transition-all text-xl font-light">
                     <Plus className="w-4 h-4" />
                   </div>
