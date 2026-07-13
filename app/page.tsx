@@ -86,13 +86,15 @@ export default function Home() {
                 digital transformation, research, entrepreneurship, and ecosystem development
               </motion.p>
               <motion.div variants={fadeInUp}>
-                <Button variant="premium" size="premium" className="group overflow-hidden relative">
-                  <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
-                    <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
-                    <ArrowRight className="w-5 h-5 relative z-10" />
-                  </span>
-                  <span className="relative z-10"><a href="https://www.ncs.org.ng/about-ncs/">Learn more</a></span>
-                </Button>
+                <a href="https://www.ncs.org.ng/about-ncs/" className="group overflow-hidden relative">
+                  <Button variant="premium" size="premium" className="">
+                    <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
+                      <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
+                      <ArrowRight className="w-5 h-5 relative z-10" />
+                    </span>
+                    <span className="relative z-10"><a href="https://www.ncs.org.ng/about-ncs/">Learn more</a></span>
+                  </Button>
+                </a>
               </motion.div>
             </motion.div>
           </div>
@@ -138,14 +140,18 @@ export default function Home() {
               engagement, encourage collaboration, document ecosystem milestones, and showcase
               individuals and organizations whose contributions continue to drive innovation and development.
             </motion.p>
+
             <motion.div variants={fadeInUp}>
-              <Button variant="premiumLight" size="premium" className="group overflow-hidden relative">
-                <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
-                  <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
-                  <ArrowRight className="w-5 h-5 relative z-10" />
-                </span>
-                <span className="relative z-10"><a href="">Learn more</a></span>
-              </Button>
+              <a href="#about">
+                <Button variant="premiumLight" size="premium" className="group overflow-hidden relative">
+                  <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
+                    <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
+                    <ArrowRight className="w-5 h-5 relative z-10" />
+                  </span>
+                  <span className="relative z-10">Learn more</span>
+                </Button>
+              </a>
+
             </motion.div>
 
             {/* Timeline component */}
