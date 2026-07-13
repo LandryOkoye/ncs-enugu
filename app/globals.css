@@ -6,6 +6,7 @@
 
 @theme {
   --font-sans: system-ui, -apple-system, sans-serif;
+  --font-climate: var(--font-climate);
   --font-heading: var(--font-climate), system-ui, sans-serif;
   --font-secondary: var(--font-delight), serif;
   --color-gold: #c59d5f;
@@ -20,7 +21,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-climate), system-ui, sans-serif;
 }
 
 .text-gradient-gold {

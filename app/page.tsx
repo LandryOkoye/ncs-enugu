@@ -91,7 +91,7 @@ export default function Home() {
                     <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
                     <ArrowRight className="w-5 h-5 relative z-10" />
                   </span>
-                  <span className="relative z-10">Lorem Ipsum</span>
+                  <span className="relative z-10"><a href="https://www.ncs.org.ng/about-ncs/">Learn more</a></span>
                 </Button>
               </motion.div>
             </motion.div>
@@ -136,8 +136,9 @@ export default function Home() {
               20<span className="text-[#c59d5f]">26</span> NCS Enugu Awards
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-gray-400 max-w-xl text-lg font-light leading-relaxed mb-10">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+              The Awards Night will serve as a platform to celebrate achievements, strengthen stakeholder
+              engagement, encourage collaboration, document ecosystem milestones, and showcase
+              individuals and organizations whose contributions continue to drive innovation and development.
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Button variant="premiumLight" size="premium" className="group overflow-hidden relative">
@@ -145,7 +146,7 @@ export default function Home() {
                   <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
                   <ArrowRight className="w-5 h-5 relative z-10" />
                 </span>
-                <span className="relative z-10">LEARN MORE</span>
+                <span className="relative z-10"><a href="">Learn more</a></span>
               </Button>
             </motion.div>
 
@@ -269,7 +270,7 @@ export default function Home() {
             className="mb-20"
           >
             <motion.h3 variants={fadeInUp} className="text-5xl md:text-6xl font-light mb-6">Frequently Asked</motion.h3>
-            <motion.p variants={fadeInUp} className="text-gray-500 text-lg font-light">Everything you need to know about the Effie Awards.</motion.p>
+            <motion.p variants={fadeInUp} className="text-gray-500 text-lg font-light">Everything you need to know about the NCS Enugu Awards.</motion.p>
           </motion.div>
 
           <motion.div
@@ -280,7 +281,7 @@ export default function Home() {
             className="divide-y divide-black/10"
           >
             {[
-              { q: "Who can enter the Effie Awards?", a: "Any marketing campaign that ran in Switzerland during the qualifying period is eligible, provided it demonstrates proven results." },
+              { q: "Who can enter the NCS Enugu Awards?", a: "The NCS Enugu Awards are open to all Tech Enthusiasts of the Republc of Nigearia, Enugu State." },
               { q: "What is the judging criteria?", a: "Entries are evaluated on four pillars: Strategic Challenge (20%), Creative Idea (20%), Bringing the Idea to Life (20%), and Results (40%)." },
               { q: "When is the entry deadline?", a: "The final deadline for all 2026 entries is June 1st, 2026. Early bird rates apply until April 15th." },
               { q: "How are the winners announced?", a: "Finalists are announced in July, with Bronze and Silver winners revealed in September. Gold and Grand Effie winners are exclusively announced at the Award Night in November." }
@@ -318,7 +319,7 @@ export default function Home() {
             variants={staggerContainer}
           >
             <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-secondary italic">Get in Touch</motion.h2>
-            <motion.h3 variants={fadeInUp} className="text-5xl md:text-7xl font-light leading-[1.1] mb-8">Ready to submit<br />your work?</motion.h3>
+            <motion.h3 variants={fadeInUp} className="text-5xl md:text-7xl font-light leading-[1.1] mb-8">Ready to<br />Contact us</motion.h3>
             <motion.p variants={fadeInUp} className="text-gray-400 font-light text-xl mb-12 max-w-md">
               Have questions about the entry process, judging, or sponsorship opportunities? Our team is here to help.
             </motion.p>
@@ -329,8 +330,8 @@ export default function Home() {
                   <MapPin className="w-5 h-5 text-[#c59d5f]" />
                 </div>
                 <div>
-                  <h5 className="font-semibold mb-1 group-hover:text-[#c59d5f] transition-colors">Office</h5>
-                  <p className="text-gray-500 font-light">Zurich, Switzerland</p>
+                  <h5 className="mb-1 group-hover:text-[#c59d5f] transition-colors">Office</h5>
+                  <p className="text-gray-500 font-light">Enugu, Nigeria</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 group">
@@ -338,8 +339,8 @@ export default function Home() {
                   <Mail className="w-5 h-5 text-[#c59d5f]" />
                 </div>
                 <div>
-                  <h5 className="font-semibold mb-1 group-hover:text-[#c59d5f] transition-colors">Email</h5>
-                  <p className="text-gray-500 font-light">contact@effie-switzerland.ch</p>
+                  <h5 className="mb-1 group-hover:text-[#c59d5f] transition-colors">Email</h5>
+                  <p className="text-gray-500 font-light">contact@encsenuguawards.org</p>
                 </div>
               </div>
             </motion.div>
@@ -352,34 +353,35 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             className="bg-[#111] p-10 md:p-14 rounded-3xl border border-white/5 shadow-2xl relative"
           >
-            <form className="space-y-8 relative z-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-2">
-                  <label className="text-xs font-bold tracking-widest text-gray-400 uppercase">First Name</label>
-                  <input type="text" className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#c59d5f] transition-colors" placeholder="Jane" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold tracking-widest text-gray-400 uppercase">Last Name</label>
-                  <input type="text" className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#c59d5f] transition-colors" placeholder="Doe" />
-                </div>
+            <div className="space-y-8 relative z-10">
+              <h4 className="text-2xl font-light text-white mb-6">Connect with us</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f] transition-colors duration-300">
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                  </div>
+                  <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">LinkedIn</span>
+                </a>
+                <a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f] transition-colors duration-300">
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                  </div>
+                  <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">Instagram</span>
+                </a>
+                <a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f] transition-colors duration-300">
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                  </div>
+                  <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">X</span>
+                </a>
+                <a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f] transition-colors duration-300">
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg>
+                  </div>
+                  <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">Facebook</span>
+                </a>
               </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest text-gray-400 uppercase">Email Address</label>
-                <input type="email" className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#c59d5f] transition-colors" placeholder="jane@agency.com" />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold tracking-widest text-gray-400 uppercase">Message</label>
-                <textarea rows={4} className="w-full bg-transparent border-b border-white/20 py-3 text-white focus:outline-none focus:border-[#c59d5f] transition-colors resize-none" placeholder="How can we help you?"></textarea>
-              </div>
-
-              <Button variant="premiumLight" size="premium" className="w-full mt-4 group justify-center overflow-hidden relative">
-                <span className="relative z-10">SEND MESSAGE</span>
-                <span className="w-12 h-12 rounded-full bg-black/10 flex items-center justify-center text-black relative z-10 ml-2 transition-transform group-hover:translate-x-1">
-                  <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[30] transition-transform duration-700 ease-out z-[-1]"></span>
-                  <ArrowRight className="w-5 h-5 relative z-10 group-hover:text-white transition-colors duration-500" />
-                </span>
-              </Button>
-            </form>
+            </div>
           </motion.div>
         </div>
       </section>
