@@ -80,7 +80,17 @@ export default function Home() {
       />
 
       {/* Section 1: Hero */}
-      <section ref={heroRef} id="home" className="min-h-screen bg-[#070707] text-white px-[10%] pt-40 pb-40 flex items-center relative angle-bottom overflow-hidden">
+      <section ref={heroRef} id="home" className="min-h-screen bg-[#070707] text-[#efe5d2] px-[10%] pt-40 pb-40 flex items-center relative angle-bottom overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-[250%] h-full object-cover translate-x-[25%] opacity-90 pointer-events-none"
+        >
+          <source src="/Logo_rotates_360_degrees_right_3.mp4" type="video/mp4" />
+        </video>
         <motion.div
           aria-hidden="true"
           className="premium-orb premium-orb-one"
@@ -121,25 +131,25 @@ export default function Home() {
             style={{ y: heroLogoY, rotate: heroLogoRotate }}
             className="flex justify-center lg:justify-end relative"
           >
-            <motion.div
+            {/* <motion.div
               aria-hidden="true"
               className="absolute inset-10 rounded-full border border-[#c59d5f]/20"
               animate={prefersReducedMotion ? undefined : { rotate: 360 }}
               transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
-            />
-            <motion.img
+            /> */}
+            {/* <motion.img
               src="/NCS 3.png"
               alt="NCS Awards"
               className="w-full max-w-xs object-contain drop-shadow-[0_20px_40px_rgba(197,157,95,0.2)] relative z-10"
               whileHover={prefersReducedMotion ? undefined : { scale: 1.06, rotate: 1.5 }}
               transition={{ type: "spring", stiffness: 220, damping: 18 }}
-            />
+            /> */}
           </motion.div>
         </div>
       </section>
 
       {/* Section 2: About */}
-      <section id="about" className="min-h-[100vh] bg-white text-black px-[10%] py-40 relative flex items-center">
+      <section id="about" className="min-h-[100vh] bg-[#efe5d2] text-black px-[10%] py-40 relative flex items-center">
         <div className="absolute inset-0 bg-lines pointer-events-none"></div>
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
@@ -172,7 +182,7 @@ export default function Home() {
               <motion.div variants={fadeInUp}>
                 <a href="https://www.ncs.org.ng/about-ncs/" className="group overflow-hidden relative">
                   <Button variant="premium" size="premium" className="">
-                    <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
+                    <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-[#efe5d2] relative z-10 transition-transform group-hover:translate-x-1">
                       <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
                       <ArrowRight className="w-5 h-5 relative z-10" />
                     </span>
@@ -215,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Timeline / Year */}
-      <section className="min-h-[80vh] bg-[#070707] text-white px-[10%] pt-40 pb-32 flex items-center relative overflow-hidden">
+      <section className="min-h-[80vh] bg-[#070707] text-[#efe5d2] px-[10%] pt-40 pb-32 flex items-center relative overflow-hidden">
         <div aria-hidden="true" className="timeline-ambient-ring" />
         <motion.div
           aria-hidden="true"
@@ -243,7 +253,7 @@ export default function Home() {
             <motion.div variants={fadeInUp}>
               <a href="#about">
                 <Button variant="premiumLight" size="premium" className="group overflow-hidden relative">
-                  <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-white relative z-10 transition-transform group-hover:translate-x-1">
+                  <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-[#efe5d2] relative z-10 transition-transform group-hover:translate-x-1">
                     <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
                     <ArrowRight className="w-5 h-5 relative z-10" />
                   </span>
@@ -255,9 +265,9 @@ export default function Home() {
 
             {/* Timeline component */}
             <motion.div variants={fadeInUp} className="mt-32 relative max-w-2xl">
-              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -translate-y-1/2"></div>
+              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-[#efe5d2]/10 -translate-y-1/2"></div>
               <motion.div
-                className="absolute top-1/2 left-0 h-[1px] bg-gradient-to-r from-[#c59d5f] via-white to-[#c59d5f] -translate-y-1/2"
+                className="absolute top-1/2 left-0 h-[1px] bg-gradient-to-r from-[#c59d5f] via-[#efe5d2] to-[#c59d5f] -translate-y-1/2"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 1.1, ease: premiumEase }}
@@ -268,10 +278,10 @@ export default function Home() {
                 {/* Item 1 */}
                 <div className="flex flex-col flex-1 pb-16 transform hover:-translate-y-2 transition-transform cursor-default">
                   <div className="mb-4 pr-4">
-                    <div className="text-lg font-light mb-1 text-white/90">Finalist<br />announcement</div>
+                    <div className="text-lg font-light mb-1 text-[#efe5d2]/90">Finalist<br />announcement</div>
                   </div>
                   <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">AUG 2026</div>
-                  <motion.div custom={0} variants={timelineDot} className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
+                  <motion.div custom={0} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
                     <div className="w-3 h-3 bg-black rounded-full"></div>
                   </motion.div>
                 </div>
@@ -279,10 +289,10 @@ export default function Home() {
                 {/* Item 2 */}
                 <div className="flex flex-col-reverse flex-1 pt-16 -ml-12 transform hover:translate-y-2 transition-transform cursor-default">
                   <div className="mt-4 pr-4">
-                    <div className="text-lg font-light mt-1 max-w-[150px] text-white/90">Bronze and<br />silver winners<br />announcement</div>
+                    <div className="text-lg font-light mt-1 max-w-[150px] text-[#efe5d2]/90">Bronze and<br />silver winners<br />announcement</div>
                   </div>
                   <div className="text-sm font-bold text-[#c59d5f] tracking-widest mt-3">AUG 2026</div>
-                  <motion.div custom={1} variants={timelineDot} className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
+                  <motion.div custom={1} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
                     <div className="w-3 h-3 bg-black rounded-full"></div>
                   </motion.div>
                 </div>
@@ -290,10 +300,10 @@ export default function Home() {
                 {/* Item 3 */}
                 <div className="flex flex-col flex-1 pb-16 transform hover:-translate-y-2 transition-transform cursor-default">
                   <div className="mb-4">
-                    <div className="text-lg font-light mb-1 text-white/90">Award Night</div>
+                    <div className="text-lg font-light mb-1 text-[#efe5d2]/90">Award Night</div>
                   </div>
                   <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">AUG 2026</div>
-                  <motion.div custom={2} variants={timelineDot} className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
+                  <motion.div custom={2} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
                     <motion.div
                       className="w-3 h-3 bg-[#c59d5f] rounded-full shadow-[0_0_15px_#c59d5f]"
                       animate={prefersReducedMotion ? undefined : { scale: [1, 1.45, 1], opacity: [1, 0.65, 1] }}
@@ -326,7 +336,7 @@ export default function Home() {
       </section>
 
       {/* Section 4: Nominees (New) */}
-      <section id="nominees" className="py-40 bg-[#0a0a0a] text-white px-[10%] border-t border-white/5">
+      <section id="nominees" className="py-40 bg-[#0a5513] text-[#efe5d2] px-[10%] border-t border-[#efe5d2]/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -359,13 +369,13 @@ export default function Home() {
                   scale: 1.025
                 }}
                 transition={{ type: "spring", stiffness: 260, damping: 22 }}
-                className="group relative overflow-hidden rounded-2xl bg-[#111] border border-white/5 hover:border-white/20 transition-colors duration-500 cursor-pointer motion-card"
+                className="group relative overflow-hidden rounded-2xl bg-[#111] border border-[#efe5d2]/5 hover:border-[#efe5d2]/20 transition-colors duration-500 cursor-pointer motion-card"
               >
                 <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/25 via-[#efe5d2]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#efe5d2]/70 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                   <motion.div
-                    className="absolute inset-0 flex items-center justify-center text-white/10 text-9xl font-bold"
+                    className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/10 text-9xl font-bold"
                     whileHover={prefersReducedMotion ? undefined : { scale: 1.14, rotate: -2 }}
                     transition={{ type: "spring", stiffness: 180, damping: 18 }}
                   >
@@ -374,7 +384,7 @@ export default function Home() {
                 </div>
                 <div className="p-8 relative z-10">
                   <div className="text-[#c59d5f] text-xs font-bold tracking-widest mb-2 uppercase">{nominee.cat}</div>
-                  <h4 className="text-2xl font-light mb-4 text-white group-hover:text-[#c59d5f] transition-colors">{nominee.title}</h4>
+                  <h4 className="text-2xl font-light mb-4 text-[#efe5d2] group-hover:text-[#c59d5f] transition-colors">{nominee.title}</h4>
                   <p className="text-gray-400 font-light text-sm line-clamp-2">{nominee.desc}</p>
                 </div>
               </motion.div>
@@ -388,7 +398,7 @@ export default function Home() {
             className="mt-20 text-center"
           >
             <motion.button
-              className="text-white hover:text-[#c59d5f] font-semibold text-sm tracking-widest uppercase transition-colors border-b border-white/20 hover:border-[#c59d5f] pb-1"
+              className="text-[#efe5d2] hover:text-[#c59d5f] font-semibold text-sm tracking-widest uppercase transition-colors border-b border-[#efe5d2]/20 hover:border-[#c59d5f] pb-1"
               whileHover={prefersReducedMotion ? undefined : { y: -3, letterSpacing: "0.18em" }}
               whileTap={{ scale: 0.97 }}
             >
@@ -399,7 +409,7 @@ export default function Home() {
       </section>
 
       {/* Section 5: FAQ (New) */}
-      <section id="faq" className="py-40 bg-white text-black px-[10%]">
+      <section id="faq" className="py-40 bg-[#efe5d2] text-black px-[10%]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
@@ -435,7 +445,7 @@ export default function Home() {
                 <div className="flex justify-between items-center">
                   <h4 className="text-2xl  group-hover:text-[#b38b4d] transition-colors">{faq.q}</h4>
                   <motion.div
-                    className="w-8 h-8 rounded-full border border-black/20 flex items-center justify-center group-hover:border-[#b38b4d] group-hover:bg-[#b38b4d] group-hover:text-white transition-all text-xl font-light"
+                    className="w-8 h-8 rounded-full border border-black/20 flex items-center justify-center group-hover:border-[#b38b4d] group-hover:bg-[#b38b4d] group-hover:text-[#efe5d2] transition-all text-xl font-light"
                     whileHover={prefersReducedMotion ? undefined : { rotate: 90, scale: 1.08 }}
                     transition={{ type: "spring", stiffness: 300, damping: 18 }}
                   >
@@ -452,7 +462,7 @@ export default function Home() {
       </section>
 
       {/* Section 6: Contact (New) */}
-      <section id="contact" className="py-40 bg-[#070707] text-white px-[10%] relative overflow-hidden">
+      <section id="contact" className="py-40 bg-[#070707] text-[#efe5d2] px-[10%] relative overflow-hidden">
         {/* Subtle background glow */}
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.03, 0.05, 0.03] }}
@@ -475,7 +485,7 @@ export default function Home() {
 
             <motion.div variants={fadeInUp} className="space-y-8">
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f]/20 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-[#efe5d2]/5 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f]/20 transition-colors">
                   <MapPin className="w-5 h-5 text-[#c59d5f]" />
                 </div>
                 <div>
@@ -484,7 +494,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f]/20 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-[#efe5d2]/5 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f]/20 transition-colors">
                   <Mail className="w-5 h-5 text-[#c59d5f]" />
                 </div>
                 <div>
@@ -501,34 +511,34 @@ export default function Home() {
             transition={{ duration: 0.9, ease: premiumEase }}
             viewport={{ once: true, margin: "-100px" }}
             whileHover={prefersReducedMotion ? undefined : { y: -8, rotateX: 1.5 }}
-            className="bg-[#111] p-10 md:p-14 rounded-3xl border border-white/5 shadow-2xl relative motion-card contact-shine"
+            className="bg-[#111] p-10 md:p-14 rounded-3xl border border-[#efe5d2]/5 shadow-2xl relative motion-card contact-shine"
           >
             <div className="space-y-8 relative z-10">
-              <h4 className="text-2xl font-light text-white mb-6">Connect with us</h4>
+              <h4 className="text-2xl font-light text-[#efe5d2] mb-6">Connect with us</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <motion.a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-white/10" whileHover={prefersReducedMotion ? undefined : { x: 6, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 22 }}>
+                <motion.a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-[#efe5d2]/5 border border-[#efe5d2]/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-[#efe5d2]/10" whileHover={prefersReducedMotion ? undefined : { x: 6, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 22 }}>
                   <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f] transition-colors duration-300">
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-[#efe5d2] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
                   </div>
-                  <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">LinkedIn</span>
+                  <span className="font-semibold text-gray-300 group-hover:text-[#efe5d2] transition-colors">LinkedIn</span>
                 </motion.a>
-                <motion.a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-white/10" whileHover={prefersReducedMotion ? undefined : { x: 6, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 22 }}>
+                <motion.a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-[#efe5d2]/5 border border-[#efe5d2]/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-[#efe5d2]/10" whileHover={prefersReducedMotion ? undefined : { x: 6, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 22 }}>
                   <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f] transition-colors duration-300">
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-[#efe5d2] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
                   </div>
-                  <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">Instagram</span>
+                  <span className="font-semibold text-gray-300 group-hover:text-[#efe5d2] transition-colors">Instagram</span>
                 </motion.a>
-                <motion.a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-white/10" whileHover={prefersReducedMotion ? undefined : { x: 6, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 22 }}>
+                <motion.a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-[#efe5d2]/5 border border-[#efe5d2]/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-[#efe5d2]/10" whileHover={prefersReducedMotion ? undefined : { x: 6, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 22 }}>
                   <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f] transition-colors duration-300">
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-[#efe5d2] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
                   </div>
-                  <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">X</span>
+                  <span className="font-semibold text-gray-300 group-hover:text-[#efe5d2] transition-colors">X</span>
                 </motion.a>
-                <motion.a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-white/10" whileHover={prefersReducedMotion ? undefined : { x: 6, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 22 }}>
+                <motion.a href="#" className="flex items-center gap-4 group p-4 rounded-xl bg-[#efe5d2]/5 border border-[#efe5d2]/10 hover:border-[#c59d5f]/50 transition-all duration-300 hover:bg-[#efe5d2]/10" whileHover={prefersReducedMotion ? undefined : { x: 6, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 320, damping: 22 }}>
                   <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center shrink-0 group-hover:bg-[#c59d5f] transition-colors duration-300">
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-[#efe5d2] transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg>
                   </div>
-                  <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">Facebook</span>
+                  <span className="font-semibold text-gray-300 group-hover:text-[#efe5d2] transition-colors">Facebook</span>
                 </motion.a>
               </div>
             </div>

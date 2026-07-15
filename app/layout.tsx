@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("scroll-smooth", climateCrisis.variable, delightFallback.variable, "font-sans", geist.variable)}>
       <body className="flex flex-col min-h-screen font-sans bg-[#070707] text-white">
-        <nav className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl bg-white rounded-full px-8 py-4 z-50 flex justify-between items-center shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 border border-white/20">
+        <nav className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl bg-[#efe5d2] rounded-full px-8 py-4 z-50 flex justify-between items-center shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 border border-[#efe5d2]/20">
           <a href="#" className="flex items-center">
             <img src="/logo.png" alt="NCS Enugu Awards" className="h-12 w-auto object-contain" />
           </a>
@@ -55,15 +55,15 @@ export default function RootLayout({
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#c59d5f] to-transparent opacity-20"></div>
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
             <div className="col-span-1 md:col-span-6">
-              <div className="font-bold text-3xl flex items-center gap-2 mb-6">
-                <span><span className="font-bold">NCS</span> <span className="font-light">Awards Enugu</span></span>
+              <div className="font-bold text-3xl flex items-center gap-2 mb-6 ">
+                <span><span className="font-bold text-[#d1a32e]">NCS</span> <span className="font-light">Awards Enugu</span></span>
               </div>
               <p className="text-gray-500 max-w-sm text-base font-light leading-relaxed">
                 Recognizing Excellence, <br />Driving Impact, <br />Connecting Leaders
               </p>
             </div>
             <div className="col-span-1 md:col-span-3">
-              <h4 className="font-semibold mb-6 text-[#c59d5f] tracking-widest text-sm uppercase">Navigation</h4>
+              <h4 className="font-semibold mb-6 text-[#0a5513] tracking-widest text-sm uppercase">Navigation</h4>
               <ul className="space-y-4 text-base font-light text-gray-400">
                 <li><a href="#about" className="hover:text-white transition-colors">About the Awards</a></li>
                 <li><a href="#nominees" className="hover:text-white transition-colors">2026 Nominees</a></li>
@@ -72,7 +72,7 @@ export default function RootLayout({
               </ul>
             </div>
             <div className="col-span-1 md:col-span-3">
-              <h4 className="font-semibold mb-6 text-[#c59d5f] tracking-widest text-sm uppercase">Legal</h4>
+              <h4 className="font-semibold mb-6 text-[#0a5513] tracking-widest text-sm uppercase">Legal</h4>
               <ul className="space-y-4 text-base font-light text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
