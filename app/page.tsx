@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform, type Variants } from "framer-motion";
 import { ArrowRight, MapPin, Mail, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
@@ -87,7 +88,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-[250%] h-full object-cover translate-x-[25%] opacity-90 pointer-events-none"
+          className="absolute inset-0 w-[250%] h-full object-cover translate-x-[25%] opacity-80 pointer-events-none"
         >
           <source src="/Logo_rotates_360_degrees_right_3.mp4" type="video/mp4" />
         </video>
@@ -397,13 +398,15 @@ export default function Home() {
             transition={{ delay: 0.8 }}
             className="mt-20 text-center"
           >
-            <motion.button
-              className="text-[#efe5d2] hover:text-[#c59d5f] font-semibold text-sm tracking-widest uppercase transition-colors border-b border-[#efe5d2]/20 hover:border-[#c59d5f] pb-1"
-              whileHover={prefersReducedMotion ? undefined : { y: -3, letterSpacing: "0.18em" }}
-              whileTap={{ scale: 0.97 }}
-            >
-              View All Nominees
-            </motion.button>
+            <Link href="/nominees">
+              <motion.button
+                className="text-[#efe5d2] hover:text-[#c59d5f] font-semibold text-sm tracking-widest uppercase transition-colors border-b border-[#efe5d2]/20 hover:border-[#c59d5f] pb-1"
+                whileHover={prefersReducedMotion ? undefined : { y: -3, letterSpacing: "0.18em" }}
+                whileTap={{ scale: 0.97 }}
+              >
+                View All Nominees
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>

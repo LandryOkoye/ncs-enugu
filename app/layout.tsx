@@ -34,10 +34,10 @@ export default function RootLayout({
           </a>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">About</a>
-            <a href="#nominees" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Nominees</a>
-            <a href="#faq" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">FAQ</a>
-            <a href="#contact" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Contact</a>
+            <a href="/#about" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">About</a>
+            <a href="/nominees" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Nominees</a>
+            <a href="/#faq" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">FAQ</a>
+            <a href="/#contact" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Contact</a>
           </div>
 
           <button className="md:hidden text-black flex flex-col gap-[5px] p-2">
@@ -65,10 +65,10 @@ export default function RootLayout({
             <div className="col-span-1 md:col-span-3">
               <h4 className="font-semibold mb-6 text-[#0a5513] tracking-widest text-sm uppercase">Navigation</h4>
               <ul className="space-y-4 text-base font-light text-gray-400">
-                <li><a href="#about" className="hover:text-white transition-colors">About the Awards</a></li>
-                <li><a href="#nominees" className="hover:text-white transition-colors">2026 Nominees</a></li>
-                <li><a href="#faq" className="hover:text-white transition-colors">Frequently Asked</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="/#about" className="hover:text-white transition-colors">About the Awards</a></li>
+                <li><a href="/nominees" className="hover:text-white transition-colors">2026 Nominees</a></li>
+                <li><a href="/#faq" className="hover:text-white transition-colors">Frequently Asked</a></li>
+                <li><a href="/#contact" className="hover:text-white transition-colors">Contact Us</a></li>
               </ul>
             </div>
             <div className="col-span-1 md:col-span-3">
