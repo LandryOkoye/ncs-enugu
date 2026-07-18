@@ -88,7 +88,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-[250%] h-full object-cover translate-x-[25%] opacity-80 pointer-events-none"
+          className="absolute inset-0 w-[250%] h-full object-cover translate-x-[25%] opacity-60 pointer-events-none"
         >
           <source src="/Logo_rotates_360_degrees_right_3.mp4" type="video/mp4" />
         </video>
@@ -119,10 +119,9 @@ export default function Home() {
               work
             </motion.h1>
             <motion.p variants={fadeInUp} className="mt-12 text-gray-400 max-w-xl text-lg font-light leading-relaxed">
-              The Nigeria Computer Society (NCS), Enugu State Chapter, presents the maiden edition of the
-              NCS Enugu Innovation & Impact Awards 2026, a ﬂagship recognition and ecosystem
-              engagement platform established to celebrate excellence, innovation, leadership, and impact
-              within the technology ecosystem.
+              The NCS Enugu Innovation & Impact Awards 2026 celebrates outstanding innovation, leadership, and excellence across the technology ecosystem.
+              Bringing together innovators, organizations, and industry leaders, the event recognizes transformative achievements while fostering collaboration, inspiration, and the growth of technology in Enugu State.
+
             </motion.p>
           </motion.div>
           <motion.div
@@ -248,7 +247,8 @@ export default function Home() {
             <motion.p variants={fadeInUp} className="text-gray-400 max-w-xl text-lg font-light leading-relaxed mb-10">
               The Awards Night will serve as a platform to celebrate achievements, strengthen stakeholder
               engagement, encourage collaboration, document ecosystem milestones, and showcase
-              individuals and organizations whose contributions continue to drive innovation and development.
+              individuals and organizations whose contributions continue to drive innovation and development. <br />
+              Happening at the indegenius Hotel Presidential Enugu, Enugu.
             </motion.p>
 
             <motion.div variants={fadeInUp}>
@@ -279,9 +279,9 @@ export default function Home() {
                 {/* Item 1 */}
                 <div className="flex flex-col flex-1 pb-16 transform hover:-translate-y-2 transition-transform cursor-default">
                   <div className="mb-4 pr-4">
-                    <div className="text-lg font-light mb-1 text-[#efe5d2]/90">Finalist<br />announcement</div>
+                    <div className="text-lg font-light mb-1 text-[#efe5d2]/90">Award<br />Nomination</div>
                   </div>
-                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">AUG 2026</div>
+                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">JUL 2026</div>
                   <motion.div custom={0} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
                     <div className="w-3 h-3 bg-black rounded-full"></div>
                   </motion.div>
@@ -290,7 +290,7 @@ export default function Home() {
                 {/* Item 2 */}
                 <div className="flex flex-col-reverse flex-1 pt-16 -ml-12 transform hover:translate-y-2 transition-transform cursor-default">
                   <div className="mt-4 pr-4">
-                    <div className="text-lg font-light mt-1 max-w-[150px] text-[#efe5d2]/90">Bronze and<br />silver winners<br />announcement</div>
+                    <div className="text-lg font-light mt-1 max-w-[150px] text-[#efe5d2]/90">Voting<br />for<br />Nominees</div>
                   </div>
                   <div className="text-sm font-bold text-[#c59d5f] tracking-widest mt-3">AUG 2026</div>
                   <motion.div custom={1} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
@@ -303,7 +303,7 @@ export default function Home() {
                   <div className="mb-4">
                     <div className="text-lg font-light mb-1 text-[#efe5d2]/90">Award Night</div>
                   </div>
-                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">AUG 2026</div>
+                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">25th SEPT 2026</div>
                   <motion.div custom={2} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
                     <motion.div
                       className="w-3 h-3 bg-[#c59d5f] rounded-full shadow-[0_0_15px_#c59d5f]"
@@ -382,6 +382,9 @@ export default function Home() {
                   >
                     {nominee.num}
                   </motion.div>
+                  <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
+                    Pending Selection
+                  </div>
                 </div>
                 <div className="p-8 relative z-10">
                   <div className="text-[#c59d5f] text-xs font-bold tracking-widest mb-2 uppercase">{nominee.cat}</div>
@@ -492,8 +495,8 @@ export default function Home() {
                   <MapPin className="w-5 h-5 text-[#c59d5f]" />
                 </div>
                 <div>
-                  <h5 className="mb-1 group-hover:text-[#c59d5f] transition-colors">Office</h5>
-                  <p className="text-gray-500 font-light">Enugu, Nigeria</p>
+                  <h5 className="mb-1 group-hover:text-[#c59d5f] transition-colors">Enugu</h5>
+                  <p className="text-gray-500 font-light">Nigeria</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 group">
@@ -502,7 +505,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h5 className="mb-1 group-hover:text-[#c59d5f] transition-colors">Email</h5>
-                  <p className="text-gray-500 font-light">enugustatechapter@ncs.org.ng</p>
+                  <p className="text-gray-500 font-light mb-10">enugustatechapter@ncs.org.ng</p>
                 </div>
               </div>
             </motion.div>

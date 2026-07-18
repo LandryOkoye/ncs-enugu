@@ -162,6 +162,9 @@ export default function NomineesPage() {
                       <div className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/5 text-8xl font-bold group-hover:text-[#c59d5f]/10 transition-colors duration-500">
                         {nominee.num}
                       </div>
+                      <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
+                        Pending Selection
+                      </div>
                     </div>
                     <div className="p-8 relative z-10 border-t border-[#efe5d2]/5 group-hover:border-[#c59d5f]/20 transition-colors">
                       <h4 className="text-xl font-light mb-3 text-[#efe5d2] group-hover:text-[#c59d5f] transition-colors">{nominee.name}</h4>

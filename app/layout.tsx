@@ -83,9 +83,9 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-light text-gray-600">
             <div>&copy; {new Date().getFullYear()} NCS Awards Enugu. All rights reserved.</div>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-              <a href="#" className="hover:text-white transition-colors">Twitter</a>
-              <a href="#" className="hover:text-white transition-colors">Instagram</a>
+              {/* <a href="#" className="hover:text-white transition-colors">LinkedIn</a> */}
+              <a href="https://www.x.com/ncsenugu" className="hover:text-white transition-colors">Twitter</a>
+              <a href="https://instagram.com/ncsenugu" className="hover:text-white transition-colors">Instagram</a>
             </div>
           </div>
         </footer>
