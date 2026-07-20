@@ -81,14 +81,14 @@ export default function Home() {
       />
 
       {/* Section 1: Hero */}
-      <section ref={heroRef} id="home" className="min-h-screen bg-[#070707] text-[#efe5d2] px-[10%] pt-40 pb-40 flex items-center relative angle-bottom overflow-hidden">
+      <section ref={heroRef} id="home" className="min-h-screen bg-[#070707] text-[#efe5d2] px-6 md:px-[10%] pt-40 pb-40 flex items-center relative angle-bottom overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-[250%] h-full object-cover translate-x-[25%] opacity-60 pointer-events-none"
+          className="absolute inset-0 w-full lg:w-[250%] h-full object-cover lg:translate-x-[25%] opacity-60 pointer-events-none object-center"
         >
           <source src="/Logo_rotates_360_degrees_right_3.mp4" type="video/mp4" />
         </video>
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: About */}
-      <section id="about" className="min-h-[100vh] bg-[#efe5d2] text-black px-[10%] py-40 relative flex items-center">
+      <section id="about" className="min-h-[100vh] bg-[#efe5d2] text-black px-6 md:px-[10%] py-40 relative flex items-center">
         <div className="absolute inset-0 bg-lines pointer-events-none"></div>
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
@@ -158,12 +158,25 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={clipReveal}
+              className="lg:sticky lg:top-40"
             >
-              <h2 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight sticky top-40">
+              <h2 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight">
                 Why<br />
                 NCS EIIA<br />
                 2026
               </h2>
+              <motion.img
+                src="/NCS 2.png"
+                alt="NCS Background"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 0.25, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="w-full max-w-sm mt-12 mix-blend-multiply pointer-events-none"
+                style={{
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
+                  maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)'
+                }}
+              />
             </motion.div>
             <motion.div
               className="pt-4"
@@ -208,7 +221,7 @@ export default function Home() {
                 transition={{ ease: "linear", duration: 15, repeat: Infinity }}
                 className="flex items-center gap-12 lg:gap-20 opacity-80 whitespace-nowrap w-max"
               >
-                {[...['m&k', 'SWA ASA', '20 Minuten', 'Livesystems', 'Swiss Post', 'Genesys', 'Digital Dreams'], ...['m&k', 'SWA ASA', '20 Minuten', 'Livesystems', 'Swiss Post', 'Genesys', 'Digital Dreams']].map((partner, index) => (
+                {[...['BlockchainhubAfrica', 'NCS', 'Roar Nigeria', 'Tenece', 'Genesys', 'Digital Dreams'], ...['BlockchainhubAfrica', 'NCS', 'Roar Nigeria', 'Tenece', 'Genesys', 'Digital Dreams']].map((partner, index) => (
                   <motion.div
                     key={`${partner}-${index}`}
                     className="grayscale hover:grayscale-0 transition-all cursor-pointer font-bold text-xl"
@@ -225,7 +238,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Timeline / Year */}
-      <section className="min-h-[80vh] bg-[#070707] text-[#efe5d2] px-[10%] pt-40 pb-32 flex items-center relative overflow-hidden">
+      <section className="min-h-[80vh] bg-[#070707] text-[#efe5d2] px-6 md:px-[10%] pt-40 pb-32 flex items-center relative overflow-hidden">
         <div aria-hidden="true" className="timeline-ambient-ring" />
         <motion.div
           aria-hidden="true"
@@ -265,58 +278,60 @@ export default function Home() {
             </motion.div>
 
             {/* Timeline component */}
-            <motion.div variants={fadeInUp} className="mt-32 relative max-w-2xl">
-              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-[#efe5d2]/10 -translate-y-1/2"></div>
-              <motion.div
-                className="absolute top-1/2 left-0 h-[1px] bg-gradient-to-r from-[#c59d5f] via-[#efe5d2] to-[#c59d5f] -translate-y-1/2"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                transition={{ duration: 1.1, ease: premiumEase }}
-                viewport={{ once: true }}
-                style={{ originX: 0, width: "100%" }}
-              />
-              <div className="flex justify-between relative z-10">
-                {/* Item 1 */}
-                <div className="flex flex-col flex-1 pb-16 transform hover:-translate-y-2 transition-transform cursor-default">
-                  <div className="mb-4 pr-4">
-                    <div className="text-lg font-light mb-1 text-[#efe5d2]/90">Award<br />Nomination</div>
+            <motion.div variants={fadeInUp} className="mt-32 relative max-w-2xl overflow-x-auto overflow-y-hidden pb-12 w-full snap-x">
+              <div className="min-w-[400px] md:min-w-[650px] relative px-4 mt-6">
+                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-[#efe5d2]/10 -translate-y-1/2"></div>
+                <motion.div
+                  className="absolute top-1/2 left-0 h-[1px] bg-gradient-to-r from-[#c59d5f] via-[#efe5d2] to-[#c59d5f] -translate-y-1/2"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 1.1, ease: premiumEase }}
+                  viewport={{ once: true }}
+                  style={{ originX: 0, width: "100%" }}
+                />
+                <div className="flex justify-between items-center relative z-10 min-h-[120px]">
+                  {/* Item 1 */}
+                  <div className="relative flex flex-1 justify-start snap-center">
+                    <div className="absolute bottom-full mb-6 left-0 text-left transform hover:-translate-y-2 transition-transform cursor-default">
+                      <div className="text-sm md:text-lg font-light mb-1 text-[#efe5d2]/90">Award<br />Nomination</div>
+                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mt-2">JUL 2026</div>
+                    </div>
+                    <motion.div custom={0} variants={timelineDot} className="w-5 h-5 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_6px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
+                      <div className="w-2 h-2 md:w-3 md:h-3 bg-black rounded-full"></div>
+                    </motion.div>
                   </div>
-                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">JUL 2026</div>
-                  <motion.div custom={0} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
-                    <div className="w-3 h-3 bg-black rounded-full"></div>
-                  </motion.div>
-                </div>
 
-                {/* Item 2 */}
-                <div className="flex flex-col-reverse flex-1 pt-16 -ml-12 transform hover:translate-y-2 transition-transform cursor-default">
-                  <div className="mt-4 pr-4">
-                    <div className="text-lg font-light mt-1 max-w-[150px] text-[#efe5d2]/90">Voting<br />for<br />Nominees</div>
+                  {/* Item 2 */}
+                  <div className="relative flex flex-1 justify-center snap-center">
+                    <div className="absolute top-full mt-6 left-1/2 -translate-x-1/2 text-center transform hover:translate-y-2 transition-transform cursor-default w-[150px]">
+                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-2">AUG 2026</div>
+                      <div className="text-sm md:text-lg font-light text-[#efe5d2]/90 mx-auto">Voting<br />for<br />Nominees</div>
+                    </div>
+                    <motion.div custom={1} variants={timelineDot} className="w-5 h-5 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_6px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
+                      <div className="w-2 h-2 md:w-3 md:h-3 bg-black rounded-full"></div>
+                    </motion.div>
                   </div>
-                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mt-3">AUG 2026</div>
-                  <motion.div custom={1} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
-                    <div className="w-3 h-3 bg-black rounded-full"></div>
-                  </motion.div>
-                </div>
 
-                {/* Item 3 */}
-                <div className="flex flex-col flex-1 pb-16 transform hover:-translate-y-2 transition-transform cursor-default">
-                  <div className="mb-4">
-                    <div className="text-lg font-light mb-1 text-[#efe5d2]/90">Award Night</div>
+                  {/* Item 3 */}
+                  <div className="relative flex flex-1 justify-end snap-center">
+                    <div className="absolute bottom-full mb-6 right-0 text-right transform hover:-translate-y-2 transition-transform cursor-default">
+                      <div className="text-sm md:text-lg font-light mb-1 text-[#efe5d2]/90">Award Night</div>
+                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mt-2">25th SEPT 2026</div>
+                    </div>
+                    <motion.div custom={2} variants={timelineDot} className="w-5 h-5 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_6px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
+                      <motion.div
+                        className="w-2 h-2 md:w-3 md:h-3 bg-[#c59d5f] rounded-full shadow-[0_0_15px_#c59d5f]"
+                        animate={prefersReducedMotion ? undefined : { scale: [1, 1.45, 1], opacity: [1, 0.65, 1] }}
+                        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                      />
+                    </motion.div>
                   </div>
-                  <div className="text-sm font-bold text-[#c59d5f] tracking-widest mb-3">25th SEPT 2026</div>
-                  <motion.div custom={2} variants={timelineDot} className="w-8 h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_8px_#070707]">
-                    <motion.div
-                      className="w-3 h-3 bg-[#c59d5f] rounded-full shadow-[0_0_15px_#c59d5f]"
-                      animate={prefersReducedMotion ? undefined : { scale: [1, 1.45, 1], opacity: [1, 0.65, 1] }}
-                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                    />
-                  </motion.div>
                 </div>
               </div>
             </motion.div>
           </motion.div>
 
-          <div className="relative h-full min-h-[500px] hidden lg:flex items-center justify-end">
+          <div className="relative h-full min-h-[700px] hidden lg:flex items-center justify-end lg:translate-x-[10vw] xl:translate-x-[15vw]">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -325,9 +340,13 @@ export default function Home() {
               className="w-full flex justify-end"
             >
               <motion.img
-                src="/NCS 2.png"
+                src="/presidential-hotel.png"
                 alt="2026 NCS Enugu Awards"
-                className="w-full max-w-md object-contain drop-shadow-[0_20px_40px_rgba(197,157,95,0.2)]"
+                className="w-full max-w-[80rem] object-contain drop-shadow-[0_20px_40px_rgba(197,157,95,0.2)]"
+                style={{
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)',
+                  maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)'
+                }}
                 whileHover={prefersReducedMotion ? undefined : { scale: 1.05, rotate: -1 }}
                 transition={{ type: "spring", stiffness: 220, damping: 18 }}
               />
@@ -337,7 +356,7 @@ export default function Home() {
       </section>
 
       {/* Section 4: Nominees (New) */}
-      <section id="nominees" className="py-40 bg-[#0a5513] text-[#efe5d2] px-[10%] border-t border-[#efe5d2]/5">
+      <section id="nominees" className="py-40 bg-[#0a5513] text-[#efe5d2] px-6 md:px-[10%] border-t border-[#efe5d2]/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -415,7 +434,7 @@ export default function Home() {
       </section>
 
       {/* Section 5: FAQ (New) */}
-      <section id="faq" className="py-40 bg-[#efe5d2] text-black px-[10%]">
+      <section id="faq" className="py-40 bg-[#efe5d2] text-black px-6 md:px-[10%]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
@@ -468,7 +487,7 @@ export default function Home() {
       </section>
 
       {/* Section 6: Contact (New) */}
-      <section id="contact" className="py-40 bg-[#070707] text-[#efe5d2] px-[10%] relative overflow-hidden">
+      <section id="contact" className="py-40 bg-[#070707] text-[#efe5d2] px-6 md:px-[10%] relative overflow-hidden">
         {/* Subtle background glow */}
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.03, 0.05, 0.03] }}
