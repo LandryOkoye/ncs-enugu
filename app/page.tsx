@@ -88,7 +88,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full lg:w-[250%] h-full object-cover lg:translate-x-[25%] opacity-60 pointer-events-none object-center"
+          className="absolute inset-0 w-full lg:w-[250%] h-full object-cover lg:translate-x-[25%] opacity-50 pointer-events-none object-center"
         >
           <source src="/Logo_rotates_360_degrees_right_3.mp4" type="video/mp4" />
         </video>
@@ -168,8 +168,8 @@ export default function Home() {
               <motion.img
                 src="/NCS 2.png"
                 alt="NCS Background"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 0.25, y: 0 }}
+                initial={{ opacity: 0.5, y: 20 }}
+                whileInView={{ opacity: 0.7, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
                 className="w-full max-w-sm mt-12 mix-blend-multiply pointer-events-none"
                 style={{
@@ -278,45 +278,45 @@ export default function Home() {
             </motion.div>
 
             {/* Timeline component */}
-            <motion.div variants={fadeInUp} className="mt-32 relative max-w-2xl overflow-x-auto overflow-y-hidden pb-12 w-full snap-x">
-              <div className="min-w-[400px] md:min-w-[650px] relative px-4 mt-6">
-                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-[#efe5d2]/10 -translate-y-1/2"></div>
+            <motion.div variants={fadeInUp} className="mt-24 md:mt-32 relative max-w-2xl pb-12 w-full">
+              <div className="w-full relative px-2 sm:px-4 mt-12 md:mt-6">
+                <div className="absolute top-1/2 left-2 sm:left-4 right-2 sm:right-4 h-[1px] bg-[#efe5d2]/10 -translate-y-1/2"></div>
                 <motion.div
-                  className="absolute top-1/2 left-0 h-[1px] bg-gradient-to-r from-[#c59d5f] via-[#efe5d2] to-[#c59d5f] -translate-y-1/2"
+                  className="absolute top-1/2 left-2 sm:left-4 right-2 sm:right-4 h-[1px] bg-gradient-to-r from-[#c59d5f] via-[#efe5d2] to-[#c59d5f] -translate-y-1/2"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   transition={{ duration: 1.1, ease: premiumEase }}
                   viewport={{ once: true }}
-                  style={{ originX: 0, width: "100%" }}
+                  style={{ originX: 0 }}
                 />
                 <div className="flex justify-between items-center relative z-10 min-h-[120px]">
                   {/* Item 1 */}
-                  <div className="relative flex flex-1 justify-start snap-center">
-                    <div className="absolute bottom-full mb-6 left-0 text-left transform hover:-translate-y-2 transition-transform cursor-default">
-                      <div className="text-sm md:text-lg font-light mb-1 text-[#efe5d2]/90">Award<br />Nomination</div>
-                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mt-2">JUL 2026</div>
+                  <div className="relative flex flex-1 justify-start">
+                    <div className="absolute bottom-full mb-4 md:mb-6 left-0 text-left transform hover:-translate-y-2 transition-transform cursor-default w-[90px] sm:w-[120px] md:w-auto">
+                      <div className="text-xs sm:text-sm md:text-lg font-light mb-1 text-[#efe5d2]/90 leading-tight">Award<br />Nomination</div>
+                      <div className="text-[10px] sm:text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mt-1 md:mt-2">JUL 2026</div>
                     </div>
-                    <motion.div custom={0} variants={timelineDot} className="w-5 h-5 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_6px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
-                      <div className="w-2 h-2 md:w-3 md:h-3 bg-black rounded-full"></div>
+                    <motion.div custom={0} variants={timelineDot} className="w-4 h-4 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_4px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
+                      <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-black rounded-full"></div>
                     </motion.div>
                   </div>
 
                   {/* Item 2 */}
-                  <div className="relative flex flex-1 justify-center snap-center">
-                    <div className="absolute top-full mt-6 left-1/2 -translate-x-1/2 text-center transform hover:translate-y-2 transition-transform cursor-default w-[150px]">
-                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-2">AUG 2026</div>
-                      <div className="text-sm md:text-lg font-light text-[#efe5d2]/90 mx-auto">Voting<br />for<br />Nominees</div>
+                  <div className="relative flex flex-1 justify-center">
+                    <div className="absolute top-full mt-4 md:mt-6 left-1/2 -translate-x-1/2 text-center transform hover:translate-y-2 transition-transform cursor-default w-[100px] sm:w-[120px] md:w-[150px]">
+                      <div className="text-[10px] sm:text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-1 md:mb-2">AUG 2026</div>
+                      <div className="text-xs sm:text-sm md:text-lg font-light text-[#efe5d2]/90 mx-auto leading-tight">Voting<br />for<br />Nominees</div>
                     </div>
-                    <motion.div custom={1} variants={timelineDot} className="w-5 h-5 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_6px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
-                      <div className="w-2 h-2 md:w-3 md:h-3 bg-black rounded-full"></div>
+                    <motion.div custom={1} variants={timelineDot} className="w-4 h-4 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_4px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
+                      <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-black rounded-full"></div>
                     </motion.div>
                   </div>
 
                   {/* Item 3 */}
-                  <div className="relative flex flex-1 justify-end snap-center">
-                    <div className="absolute bottom-full mb-6 right-0 text-right transform hover:-translate-y-2 transition-transform cursor-default">
-                      <div className="text-sm md:text-lg font-light mb-1 text-[#efe5d2]/90">Award Night</div>
-                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mt-2">25th SEPT 2026</div>
+                  <div className="relative flex flex-1 justify-end">
+                    <div className="absolute bottom-full mb-4 md:mb-6 right-0 text-right transform hover:-translate-y-2 transition-transform cursor-default w-[90px] sm:w-[120px] md:w-auto">
+                      <div className="text-xs sm:text-sm md:text-lg font-light mb-1 text-[#efe5d2]/90 leading-tight">Award<br />Night</div>
+                      <div className="text-[10px] sm:text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mt-1 md:mt-2">25 SEPT 2026</div>
                     </div>
                     <motion.div custom={2} variants={timelineDot} className="w-5 h-5 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_6px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
                       <motion.div
@@ -333,8 +333,8 @@ export default function Home() {
 
           <div className="relative h-full min-h-[700px] hidden lg:flex items-center justify-end lg:translate-x-[10vw] xl:translate-x-[15vw]">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 1.0 }}
+              whileInView={{ opacity: 1, scale: 1.15 }}
               transition={{ duration: 1, ease: premiumEase }}
               viewport={{ once: true }}
               className="w-full flex justify-end"
@@ -344,8 +344,10 @@ export default function Home() {
                 alt="2026 NCS Enugu Awards"
                 className="w-full max-w-[80rem] object-contain drop-shadow-[0_20px_40px_rgba(197,157,95,0.2)]"
                 style={{
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)',
-                  maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)'
+                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%), linear-gradient(to bottom, black 60%, transparent 100%)',
+                  WebkitMaskComposite: 'source-in',
+                  maskImage: 'linear-gradient(to right, transparent 0%, black 15%), linear-gradient(to bottom, black 60%, transparent 100%)',
+                  maskComposite: 'intersect'
                 }}
                 whileHover={prefersReducedMotion ? undefined : { scale: 1.05, rotate: -1 }}
                 transition={{ type: "spring", stiffness: 220, damping: 18 }}
