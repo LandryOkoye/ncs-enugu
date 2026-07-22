@@ -88,7 +88,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full lg:w-[150%] h-full object-contain lg:translate-x-[25%] opacity-50 pointer-events-none object-center scale-80"
+          className="absolute inset-0 w-full lg:w-[150%] h-full object-contain lg:translate-x-[25%] opacity-50 pointer-events-none object-center scale-85"
         >
           <source src="/Logo_rotates_360_degrees_right_3.mp4" type="video/mp4" />
         </video>
@@ -338,7 +338,11 @@ export default function Home() {
                     <div className="text-sm md:text-xl font-light text-black/80 leading-tight">Award<br />Nomination</div>
                   </div>
                   <motion.div custom={0} variants={timelineDot} className="w-6 h-6 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_6px_#efe5d2] md:shadow-[0_0_0_10px_#efe5d2] relative z-10">
-                    <div className="w-2 h-2 md:w-4 md:h-4 bg-[#efe5d2] rounded-full"></div>
+                    <motion.div
+                      className="w-3 h-3 md:w-5 md:h-5 bg-[#c59d5f] rounded-full shadow-[0_0_20px_#c59d5f]"
+                      animate={prefersReducedMotion ? undefined : { scale: [1, 1.45, 1], opacity: [1, 0.65, 1] }}
+                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                    />
                   </motion.div>
                 </div>
 
@@ -360,11 +364,7 @@ export default function Home() {
                     <div className="text-sm md:text-xl font-light text-black/80 leading-tight">Award<br />Night</div>
                   </div>
                   <motion.div custom={2} variants={timelineDot} className="w-6 h-6 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_8px_#efe5d2] md:shadow-[0_0_0_10px_#efe5d2] relative z-10">
-                    <motion.div
-                      className="w-3 h-3 md:w-5 md:h-5 bg-[#c59d5f] rounded-full shadow-[0_0_20px_#c59d5f]"
-                      animate={prefersReducedMotion ? undefined : { scale: [1, 1.45, 1], opacity: [1, 0.65, 1] }}
-                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                    />
+                    <div className="w-2 h-2 md:w-4 md:h-4 bg-[#efe5d2] rounded-full"></div>
                   </motion.div>
                 </div>
               </div>
