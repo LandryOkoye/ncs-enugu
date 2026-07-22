@@ -193,8 +193,8 @@ export default function Home() {
                 digital transformation, research, entrepreneurship, and ecosystem development
               </motion.p>
               <motion.div variants={fadeInUp}>
-                <a href="https://www.ncs.org.ng/about-ncs/" className="group overflow-hidden relative">
-                  <Button variant="premium" size="premium" className="">
+                <a href="https://www.ncs.org.ng/about-ncs/" className="group overflow-hidden relative cursor-pointer" target="_blank">
+                  <Button variant="premium" size="premium" className="cursor-pointer">
                     <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-[#efe5d2] relative z-10 transition-transform group-hover:translate-x-1">
                       <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
                       <ArrowRight className="w-5 h-5 relative z-10" />
@@ -265,8 +265,8 @@ export default function Home() {
             </motion.p>
 
             <motion.div variants={fadeInUp}>
-              <a href="#about">
-                <Button variant="premiumLight" size="premium" className="group overflow-hidden relative">
+              <a href="#about" className="cursor-pointer">
+                <Button variant="premiumLight" size="premium" className="group overflow-hidden relative cursor-pointer">
                   <span className="w-12 h-12 rounded-full bg-[#c59d5f] flex items-center justify-center text-[#efe5d2] relative z-10 transition-transform group-hover:translate-x-1">
                     <span className="absolute inset-0 rounded-full bg-[#c59d5f] scale-0 group-hover:scale-[20] transition-transform duration-700 ease-out z-[-1]"></span>
                     <ArrowRight className="w-5 h-5 relative z-10" />
@@ -277,58 +277,7 @@ export default function Home() {
 
             </motion.div>
 
-            {/* Timeline component */}
-            <motion.div variants={fadeInUp} className="mt-24 md:mt-32 relative max-w-2xl pb-12 w-full">
-              <div className="w-full relative px-2 sm:px-4 mt-12 md:mt-6">
-                <div className="absolute top-1/2 left-2 sm:left-4 right-2 sm:right-4 h-[1px] bg-[#efe5d2]/10 -translate-y-1/2"></div>
-                <motion.div
-                  className="absolute top-1/2 left-2 sm:left-4 right-2 sm:right-4 h-[1px] bg-gradient-to-r from-[#c59d5f] via-[#efe5d2] to-[#c59d5f] -translate-y-1/2"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  transition={{ duration: 1.1, ease: premiumEase }}
-                  viewport={{ once: true }}
-                  style={{ originX: 0 }}
-                />
-                <div className="flex justify-between items-center relative z-10 min-h-[120px]">
-                  {/* Item 1 */}
-                  <div className="relative flex flex-1 justify-start">
-                    <div className="absolute bottom-full mb-4 md:mb-6 left-0 text-left transform hover:-translate-y-2 transition-transform cursor-default w-[90px] sm:w-[120px] md:w-auto">
-                      <div className="text-xs sm:text-sm md:text-lg font-light mb-1 text-[#efe5d2]/90 leading-tight">Award<br />Nomination</div>
-                      <div className="text-[10px] sm:text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mt-1 md:mt-2">JUL 2026</div>
-                    </div>
-                    <motion.div custom={0} variants={timelineDot} className="w-4 h-4 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_4px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
-                      <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-black rounded-full"></div>
-                    </motion.div>
-                  </div>
 
-                  {/* Item 2 */}
-                  <div className="relative flex flex-1 justify-center">
-                    <div className="absolute top-full mt-4 md:mt-6 left-1/2 -translate-x-1/2 text-center transform hover:translate-y-2 transition-transform cursor-default w-[100px] sm:w-[120px] md:w-[150px]">
-                      <div className="text-[10px] sm:text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-1 md:mb-2">AUG 2026</div>
-                      <div className="text-xs sm:text-sm md:text-lg font-light text-[#efe5d2]/90 mx-auto leading-tight">Voting<br />for<br />Nominees</div>
-                    </div>
-                    <motion.div custom={1} variants={timelineDot} className="w-4 h-4 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_4px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
-                      <div className="w-1.5 h-1.5 md:w-3 md:h-3 bg-black rounded-full"></div>
-                    </motion.div>
-                  </div>
-
-                  {/* Item 3 */}
-                  <div className="relative flex flex-1 justify-end">
-                    <div className="absolute bottom-full mb-4 md:mb-6 right-0 text-right transform hover:-translate-y-2 transition-transform cursor-default w-[90px] sm:w-[120px] md:w-auto">
-                      <div className="text-xs sm:text-sm md:text-lg font-light mb-1 text-[#efe5d2]/90 leading-tight">Award<br />Night</div>
-                      <div className="text-[10px] sm:text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mt-1 md:mt-2">25 SEPT 2026</div>
-                    </div>
-                    <motion.div custom={2} variants={timelineDot} className="w-5 h-5 md:w-8 md:h-8 bg-[#efe5d2] rounded-full flex items-center justify-center shadow-[0_0_0_6px_#070707] md:shadow-[0_0_0_8px_#070707] relative z-10">
-                      <motion.div
-                        className="w-2 h-2 md:w-3 md:h-3 bg-[#c59d5f] rounded-full shadow-[0_0_15px_#c59d5f]"
-                        animate={prefersReducedMotion ? undefined : { scale: [1, 1.45, 1], opacity: [1, 0.65, 1] }}
-                        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                      />
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
           <div className="relative h-full min-h-[700px] hidden lg:flex items-center justify-end lg:translate-x-[10vw] xl:translate-x-[15vw]">
@@ -355,6 +304,73 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+      </section>
+
+      {/* Section 3.5: Event Timeline */}
+      <section className="min-h-[60vh] bg-[#efe5d2] text-[#070707] px-6 md:px-[10%] py-32 flex flex-col items-center justify-center relative">
+        <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#c59d5f]/10 via-transparent to-transparent pointer-events-none" />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="w-full max-w-5xl mx-auto text-center flex flex-col items-center relative z-10"
+        >
+          <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-secondary italic">Roadmap</motion.h2>
+          <motion.h3 variants={fadeInUp} className="text-4xl md:text-5xl font-light mb-32 text-black">Event Timeline</motion.h3>
+
+          <motion.div variants={fadeInUp} className="relative max-w-4xl w-full pb-12">
+            <div className="w-full relative px-4">
+              <div className="absolute top-1/2 left-4 right-4 h-[1px] bg-black/10 -translate-y-1/2"></div>
+              <motion.div
+                className="absolute top-1/2 left-4 right-4 h-[2px] bg-gradient-to-r from-[#c59d5f] via-black to-[#c59d5f] -translate-y-1/2"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 1.1, ease: premiumEase }}
+                viewport={{ once: true }}
+                style={{ originX: 0 }}
+              />
+              <div className="flex justify-between items-center relative z-10 min-h-[160px]">
+                {/* Item 1 */}
+                <div className="relative flex flex-1 justify-start">
+                  <div className="absolute bottom-full mb-10 left-0 sm:-left-6 text-center transform hover:-translate-y-2 transition-transform cursor-default w-[120px] sm:w-[150px]">
+                    <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-2">JUL 2026</div>
+                    <div className="text-sm md:text-xl font-light text-black/80 leading-tight">Award<br />Nomination</div>
+                  </div>
+                  <motion.div custom={0} variants={timelineDot} className="w-6 h-6 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_6px_#efe5d2] md:shadow-[0_0_0_10px_#efe5d2] relative z-10">
+                    <div className="w-2 h-2 md:w-4 md:h-4 bg-[#efe5d2] rounded-full"></div>
+                  </motion.div>
+                </div>
+
+                {/* Item 2 */}
+                <div className="relative flex flex-1 justify-center">
+                  <div className="absolute top-full mt-10 left-1/2 -translate-x-1/2 text-center transform hover:translate-y-2 transition-transform cursor-default w-[120px] sm:w-[150px]">
+                    <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-2">AUG 2026</div>
+                    <div className="text-sm md:text-xl font-light text-black/80 mx-auto leading-tight">Voting<br />for Nominees</div>
+                  </div>
+                  <motion.div custom={1} variants={timelineDot} className="w-6 h-6 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_6px_#efe5d2] md:shadow-[0_0_0_10px_#efe5d2] relative z-10">
+                    <div className="w-2 h-2 md:w-4 md:h-4 bg-[#efe5d2] rounded-full"></div>
+                  </motion.div>
+                </div>
+
+                {/* Item 3 */}
+                <div className="relative flex flex-1 justify-end">
+                  <div className="absolute bottom-full mb-10 right-0 sm:-right-6 text-center transform hover:-translate-y-2 transition-transform cursor-default w-[120px] sm:w-[150px]">
+                    <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-2">25 SEPT 2026</div>
+                    <div className="text-sm md:text-xl font-light text-black/80 leading-tight">Award<br />Night</div>
+                  </div>
+                  <motion.div custom={2} variants={timelineDot} className="w-6 h-6 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_8px_#efe5d2] md:shadow-[0_0_0_10px_#efe5d2] relative z-10">
+                    <motion.div
+                      className="w-3 h-3 md:w-5 md:h-5 bg-[#c59d5f] rounded-full shadow-[0_0_20px_#c59d5f]"
+                      animate={prefersReducedMotion ? undefined : { scale: [1, 1.45, 1], opacity: [1, 0.65, 1] }}
+                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Section 4: Nominees (New) */}
@@ -424,8 +440,9 @@ export default function Home() {
           >
             <Link href="/nominees">
               <motion.button
-                className="text-[#efe5d2] hover:text-[#c59d5f] font-semibold text-sm tracking-widest uppercase transition-colors border-b border-[#efe5d2]/20 hover:border-[#c59d5f] pb-1"
-                whileHover={prefersReducedMotion ? undefined : { y: -3, letterSpacing: "0.18em" }}
+                className="text-[#efe5d2] hover:text-[#c59d5f] font-semibold text-sm tracking-widest uppercase transition-colors border-b border-[#efe5d2]/20 hover:border-[#c59d5f] pb-1 cursor-pointer"
+                whileHover={prefersReducedMotion ? undefined : { y: -2, letterSpacing: "0.2em" }}
+                transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
                 whileTap={{ scale: 0.97 }}
               >
                 View All Nominees
