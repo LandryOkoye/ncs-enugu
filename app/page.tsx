@@ -88,7 +88,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full lg:w-[250%] h-full object-cover lg:translate-x-[25%] opacity-50 pointer-events-none object-center"
+          className="absolute inset-0 w-full lg:w-[150%] h-full object-contain lg:translate-x-[25%] opacity-50 pointer-events-none object-center scale-80"
         >
           <source src="/Logo_rotates_360_degrees_right_3.mp4" type="video/mp4" />
         </video>
