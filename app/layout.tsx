@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Climate_Crisis, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/navbar";
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -28,24 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("scroll-smooth", climateCrisis.variable, delightFallback.variable, "font-sans", geist.variable)}>
       <body className="flex flex-col min-h-screen font-sans bg-[#070707] text-white">
-        <nav className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl bg-[#efe5d2] rounded-full px-8 py-4 z-50 flex justify-between items-center shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 border border-[#efe5d2]/20">
-          <a href="#" className="flex items-center">
-            <img src="/logo.png" alt="NCS Enugu Awards" className="h-12 w-auto object-contain" />
-          </a>
-
-          <div className="hidden md:flex items-center gap-8">
-            <a href="/#about" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">About</a>
-            <a href="/nominees" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Nominees</a>
-            <a href="/#faq" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">FAQ</a>
-            <a href="/#contact" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Contact</a>
-          </div>
-
-          <button className="md:hidden text-black flex flex-col gap-[5px] p-2">
-            <span className="w-6 h-[2px] bg-black block rounded-full"></span>
-            <span className="w-6 h-[2px] bg-black block rounded-full"></span>
-            <span className="w-6 h-[2px] bg-black block rounded-full"></span>
-          </button>
-        </nav>
+        <Navbar />
 
         <main className="flex-1 flex flex-col w-full pt-10">
           {children}
@@ -84,8 +68,8 @@ export default function RootLayout({
             <div>&copy; {new Date().getFullYear()} NCS Awards Enugu. All rights reserved.</div>
             <div className="flex gap-4">
               {/* <a href="#" className="hover:text-white transition-colors">LinkedIn</a> */}
-              <a href="https://www.x.com/ncsenugu" className="hover:text-white transition-colors">Twitter</a>
-              <a href="https://instagram.com/ncsenugu" className="hover:text-white transition-colors">Instagram</a>
+              <a href="https://www.x.com/ncsenugu" className="hover:text-white transition-colors" target="_blank">Twitter</a>
+              <a href="https://instagram.com/ncsenugu" className="hover:text-white transition-colors" target="_blank">Instagram</a>
             </div>
           </div>
         </footer>

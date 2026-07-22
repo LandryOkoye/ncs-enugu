@@ -118,7 +118,7 @@ export default function Home() {
               that<br />
               work
             </motion.h1>
-            <motion.p variants={fadeInUp} className="mt-12 text-gray-400 max-w-xl text-lg font-light leading-relaxed">
+            <motion.p variants={fadeInUp} className="mt-12 text-gray-400 max-w-xl text-lg font-semibold leading-relaxed">
               The NCS Enugu Innovation & Impact Awards 2026 celebrates outstanding innovation, leadership, and excellence across the technology ecosystem.
               Bringing together innovators, organizations, and industry leaders, the event recognizes transformative achievements while fostering collaboration, inspiration, and the growth of technology in Enugu State.
 
@@ -156,8 +156,8 @@ export default function Home() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={clipReveal}
+              viewport={{ once: true, margin: "0px" }}
+              variants={fadeInUp}
               className="lg:sticky lg:top-40"
             >
               <h2 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight">
@@ -182,7 +182,7 @@ export default function Home() {
               className="pt-4"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "0px" }}
               variants={staggerContainer}
             >
               <motion.p variants={fadeInUp} className="text-gray-600 max-w-xl text-xl font-light leading-relaxed mb-10">
