@@ -221,14 +221,23 @@ export default function Home() {
                 transition={{ ease: "linear", duration: 15, repeat: Infinity }}
                 className="flex items-center gap-12 lg:gap-20 opacity-80 whitespace-nowrap w-max"
               >
-                {[...['BlockchainhubAfrica', 'NCS', 'Roar Nigeria', 'Tenece', 'Genesys', 'Digital Dreams'], ...['BlockchainhubAfrica', 'NCS', 'Roar Nigeria', 'Tenece', 'Genesys', 'Digital Dreams']].map((partner, index) => (
+                {[
+                  { name: 'BlockchainhubAfrica', src: '/Blockchainhub-africa-logo.png' },
+                  { name: 'NCS', src: '/ncs-logo-removebg.png' },
+                  { name: 'Roar Nigeria', src: '/RoarNig-logo-removebg-preview%20(1).png' },
+                  { name: 'Digital Dreams', src: '/digitalD-logo-removebg-preview.png' },
+                  { name: 'BlockchainhubAfrica', src: '/Blockchainhub-africa-logo.png' },
+                  { name: 'NCS', src: '/ncs-logo-removebg.png' },
+                  { name: 'Roar Nigeria', src: '/RoarNig-logo-removebg-preview%20(1).png' },
+                  { name: 'Digital Dreams', src: '/digitalD-logo-removebg-preview.png' }
+                ].map((partner, index) => (
                   <motion.div
-                    key={`${partner}-${index}`}
-                    className="grayscale hover:grayscale-0 transition-all cursor-pointer font-bold text-xl"
-                    whileHover={prefersReducedMotion ? undefined : { y: -6, scale: 1.12, color: "#b38b4d" }}
+                    key={`${partner.name}-${index}`}
+                    className="grayscale hover:grayscale-0 transition-all cursor-pointer flex items-center justify-center"
+                    whileHover={prefersReducedMotion ? undefined : { y: -6, scale: 1.12 }}
                     transition={{ type: "spring", stiffness: 320, damping: 18 }}
                   >
-                    {partner}
+                    <img src={partner.src} alt={partner.name} className="h-12 md:h-16 w-auto object-contain max-w-[150px]" />
                   </motion.div>
                 ))}
               </motion.div>
