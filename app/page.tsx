@@ -88,7 +88,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full lg:w-[150%] h-full object-contain lg:translate-x-[25%] opacity-50 pointer-events-none object-center scale-85"
+          className="absolute inset-0 w-full lg:w-[150%] h-full object-contain lg:translate-x-[25%] opacity-50 pointer-events-none object-center scale-250 lg:scale-[0.85]"
         >
           <source src="/Logo_rotates_360_degrees_right_3.mp4" type="video/mp4" />
         </video>
@@ -118,7 +118,7 @@ export default function Home() {
               that<br />
               work
             </motion.h1>
-            <motion.p variants={fadeInUp} className="mt-12 text-gray-400 max-w-xl text-lg font-semibold leading-relaxed">
+            <motion.p variants={fadeInUp} className="mt-12 text-gray-200 max-w-xl text-lg font-light leading-relaxed">
               The NCS Enugu Innovation & Impact Awards 2026 celebrates outstanding innovation, leadership, and excellence across the technology ecosystem.
               Bringing together innovators, organizations, and industry leaders, the event recognizes transformative achievements while fostering collaboration, inspiration, and the growth of technology in Enugu State.
 
@@ -214,7 +214,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-80px" }}
             className="mt-32 pt-16 border-t border-black/10 overflow-hidden"
           >
-            <h3 className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-8">Our Partners</h3>
+            <h3 className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-10">Our Partners</h3>
             <div className="relative w-full flex items-center">
               <motion.div
                 animate={{ x: ["0%", "-50%"] }}
@@ -233,11 +233,11 @@ export default function Home() {
                 ].map((partner, index) => (
                   <motion.div
                     key={`${partner.name}-${index}`}
-                    className="grayscale hover:grayscale-0 transition-all cursor-pointer flex items-center justify-center"
+                    className=" transition-all cursor-pointer flex items-center justify-center"
                     whileHover={prefersReducedMotion ? undefined : { y: -6, scale: 1.12 }}
                     transition={{ type: "spring", stiffness: 320, damping: 18 }}
                   >
-                    <img src={partner.src} alt={partner.name} className="h-12 md:h-16 w-auto object-contain max-w-[150px]" />
+                    <img src={partner.src} alt={partner.name} className="h-12 md:h-15 w-auto object-contain max-w-[200px]" />
                   </motion.div>
                 ))}
               </motion.div>
@@ -316,70 +316,161 @@ export default function Home() {
       </section>
 
       {/* Section 3.5: Event Timeline */}
-      <section className="min-h-[60vh] bg-[#efe5d2] text-[#070707] px-6 md:px-[10%] py-32 flex flex-col items-center justify-center relative">
+      <section className="min-h-[60vh] bg-[#efe5d2] text-[#070707] px-6 md:px-[10%] py-32 flex flex-col relative overflow-hidden">
         <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#c59d5f]/10 via-transparent to-transparent pointer-events-none" />
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={staggerContainer}
-          className="w-full max-w-5xl mx-auto text-center flex flex-col items-center relative z-10"
-        >
-          <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-secondary italic">Roadmap</motion.h2>
-          <motion.h3 variants={fadeInUp} className="text-4xl md:text-5xl font-light mb-32 text-black">Event Timeline</motion.h3>
 
-          <motion.div variants={fadeInUp} className="relative max-w-4xl w-full pb-12">
-            <div className="w-full relative px-4">
-              <div className="absolute top-1/2 left-4 right-4 h-[1px] bg-black/10 -translate-y-1/2"></div>
-              <motion.div
-                className="absolute top-1/2 left-4 right-4 h-[2px] bg-gradient-to-r from-[#c59d5f] via-black to-[#c59d5f] -translate-y-1/2"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                transition={{ duration: 1.1, ease: premiumEase }}
-                viewport={{ once: true }}
-                style={{ originX: 0 }}
-              />
-              <div className="flex justify-between items-center relative z-10 min-h-[160px]">
-                {/* Item 1 */}
-                <div className="relative flex flex-1 justify-start">
-                  <div className="absolute bottom-full mb-10 left-0 sm:-left-6 text-center transform hover:-translate-y-2 transition-transform cursor-default w-[120px] sm:w-[150px]">
-                    <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-2">JUL 2026</div>
-                    <div className="text-sm md:text-xl font-light text-black/80 leading-tight">Award<br />Nomination</div>
-                  </div>
-                  <motion.div custom={0} variants={timelineDot} className="w-6 h-6 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_6px_#efe5d2] md:shadow-[0_0_0_10px_#efe5d2] relative z-10">
-                    <motion.div
-                      className="w-3 h-3 md:w-5 md:h-5 bg-[#c59d5f] rounded-full shadow-[0_0_20px_#c59d5f]"
-                      animate={prefersReducedMotion ? undefined : { scale: [1, 1.45, 1], opacity: [1, 0.65, 1] }}
-                      transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-                    />
-                  </motion.div>
-                </div>
+        <div className="w-full max-w-7xl mx-auto relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="text-center  mb-30"
+          >
+            <motion.h2 variants={fadeInUp} className="text-[#c59d5f] text-sm font-bold tracking-widest uppercase mb-4 font-secondary italic">Roadmap</motion.h2>
+            <motion.h3 variants={fadeInUp} className="text-4xl md:text-5xl font-light text-black">Event Timeline & Highlights</motion.h3>
+          </motion.div>
 
-                {/* Item 2 */}
-                <div className="relative flex flex-1 justify-center">
-                  <div className="absolute top-full mt-10 left-1/2 -translate-x-1/2 text-center transform hover:translate-y-2 transition-transform cursor-default w-[120px] sm:w-[150px]">
-                    <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-2">AUG 2026</div>
-                    <div className="text-sm md:text-xl font-light text-black/80 mx-auto leading-tight">Voting<br />for Nominees</div>
-                  </div>
-                  <motion.div custom={1} variants={timelineDot} className="w-6 h-6 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_6px_#efe5d2] md:shadow-[0_0_0_10px_#efe5d2] relative z-10">
-                    <div className="w-2 h-2 md:w-4 md:h-4 bg-[#efe5d2] rounded-full"></div>
-                  </motion.div>
-                </div>
+          <div className="flex flex-col lg:flex-row gap-20 lg:gap-8 justify-between items-center lg:items-start">
 
-                {/* Item 3 */}
-                <div className="relative flex flex-1 justify-end">
-                  <div className="absolute bottom-full mb-10 right-0 sm:-right-6 text-center transform hover:-translate-y-2 transition-transform cursor-default w-[120px] sm:w-[150px]">
-                    <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest mb-2">25 SEPT 2026</div>
-                    <div className="text-sm md:text-xl font-light text-black/80 leading-tight">Award<br />Night</div>
+            {/* Left Column: Vertical Timeline */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={staggerContainer}
+              className="w-full lg:w-1/2 relative flex justify-center lg:justify-start"
+            >
+              <div className="relative w-full max-w-md">
+                {/* Vertical Line */}
+                <motion.div
+                  className="absolute left-[100px] md:left-[120px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[#c59d5f] via-black/20 to-[#c59d5f]"
+                  initial={{ scaleY: 0 }}
+                  whileInView={{ scaleY: 1 }}
+                  transition={{ duration: 1.5, ease: premiumEase }}
+                  viewport={{ once: true }}
+                  style={{ originY: 0 }}
+                />
+
+                <div className="flex flex-col gap-16 relative z-10">
+                  {/* Item 1 */}
+                  <div className="relative flex items-center group">
+                    <div className="w-[100px] md:w-[120px] text-right pr-6 md:pr-8 shrink-0">
+                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest transition-colors group-hover:text-black">JUL 2026</div>
+                    </div>
+                    <motion.div custom={0} variants={timelineDot} className="w-6 h-6 md:w-8 md:h-8 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_6px_#efe5d2] md:shadow-[0_0_0_8px_#efe5d2] relative z-10 shrink-0 mx-[-12px] md:mx-[-16px] group-hover:scale-110 transition-transform duration-500">
+                      <motion.div
+                        className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#c59d5f] rounded-full shadow-[0_0_15px_#c59d5f]"
+                        animate={prefersReducedMotion ? undefined : { scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      />
+                    </motion.div>
+                    <div className="pl-8 md:pl-12">
+                      <div className="text-lg md:text-2xl font-light text-black/90 leading-tight group-hover:translate-x-2 transition-transform duration-500">Award<br />Nomination</div>
+                    </div>
                   </div>
-                  <motion.div custom={2} variants={timelineDot} className="w-6 h-6 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_8px_#efe5d2] md:shadow-[0_0_0_10px_#efe5d2] relative z-10">
-                    <div className="w-2 h-2 md:w-4 md:h-4 bg-[#efe5d2] rounded-full"></div>
-                  </motion.div>
+
+                  {/* Item 2 */}
+                  <div className="relative flex items-center group">
+                    <div className="w-[100px] md:w-[120px] text-right pr-6 md:pr-8 shrink-0">
+                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest transition-colors group-hover:text-black">AUG 2026</div>
+                    </div>
+                    <motion.div custom={1} variants={timelineDot} className="w-6 h-6 md:w-8 md:h-8 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_6px_#efe5d2] md:shadow-[0_0_0_8px_#efe5d2] relative z-10 shrink-0 mx-[-12px] md:mx-[-16px] group-hover:scale-110 transition-transform duration-500">
+                      <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-[#efe5d2] rounded-full transition-colors duration-500 group-hover:bg-[#c59d5f]"></div>
+                    </motion.div>
+                    <div className="pl-8 md:pl-12">
+                      <div className="text-lg md:text-2xl font-light text-black/90 leading-tight group-hover:translate-x-2 transition-transform duration-500">Voting<br />for Nominees</div>
+                    </div>
+                  </div>
+
+                  {/* Item 3 */}
+                  <div className="relative flex items-center group">
+                    <div className="w-[100px] md:w-[120px] text-right pr-6 md:pr-8 shrink-0">
+                      <div className="text-xs md:text-sm font-bold text-[#c59d5f] tracking-widest transition-colors group-hover:text-black leading-tight">25 SEPT<br />2026</div>
+                    </div>
+                    <motion.div custom={2} variants={timelineDot} className="w-6 h-6 md:w-8 md:h-8 bg-black rounded-full flex items-center justify-center shadow-[0_0_0_6px_#efe5d2] md:shadow-[0_0_0_8px_#efe5d2] relative z-10 shrink-0 mx-[-12px] md:mx-[-16px] group-hover:scale-110 transition-transform duration-500">
+                      <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-[#efe5d2] rounded-full transition-colors duration-500 group-hover:bg-[#c59d5f]"></div>
+                    </motion.div>
+                    <div className="pl-8 md:pl-12">
+                      <div className="text-lg md:text-2xl font-light text-black/90 leading-tight group-hover:translate-x-2 transition-transform duration-500">Award<br />Night</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        </motion.div>
+            </motion.div>
+
+            {/* Right Column: Highlights Bubbles */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={staggerContainer}
+              className="w-full lg:w-1/2 flex flex-col justify-center items-center mt-20 lg:mt-0"
+            >
+              {/* Top Row */}
+              <div className="flex justify-center items-center gap-4 md:gap-8 mb-12 md:mb-4 z-10 w-full">
+                <motion.div
+                  variants={fadeInUp}
+                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[4deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
+                >
+                  keynotes presentations
+                </motion.div>
+                <motion.div
+                  variants={fadeInUp}
+                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[3deg] hover:rotate-[0deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                >
+                  leadership conversations
+                </motion.div>
+              </div>
+
+              {/* Middle Row */}
+              <div className="flex justify-center items-center gap-4 md:gap-8 mb-2 md:mb-4 z-20 w-full">
+                <motion.div
+                  variants={fadeInUp}
+                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[3deg] hover:-rotate-[0deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
+                >
+                  awards ceremony
+                </motion.div>
+                <motion.div
+                  variants={fadeInUp}
+                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[5deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                >
+                  networking sessions
+                </motion.div>
+                <motion.div
+                  variants={fadeInUp}
+                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[4deg] hover:-rotate-[2deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
+                >
+                  sponsor/partner showcase
+                </motion.div>
+              </div>
+
+              {/* Bottom Row */}
+              <div className="flex justify-center items-center gap-4 md:gap- z-30 w-full">
+                <motion.div
+                  variants={fadeInUp}
+                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[4deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                >
+                  cultural experience
+                </motion.div>
+                <motion.div
+                  variants={fadeInUp}
+                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[3deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
+                >
+                  ecosystem recognition
+                </motion.div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
       </section>
 
       {/* Section 4: Nominees (New) */}
