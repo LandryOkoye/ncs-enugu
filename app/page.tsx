@@ -1,12 +1,13 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform, type Variants } from "framer-motion";
 import { ArrowRight, MapPin, Mail, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const heroRef = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll();
@@ -489,9 +490,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: "01", cat: "Brand Activation", title: "The Digital Leap", desc: "An innovative campaign that redefined digital engagement for modern audiences in Switzerland." },
-              { num: "02", cat: "Social Good", title: "Sustainable Future", desc: "Driving real environmental change through powerful storytelling and community action.", offset: true },
-              { num: "03", cat: "Innovation", title: "Beyond Reality", desc: "Merging physical and virtual worlds for a groundbreaking product launch experience." }
+              { num: "01", cat: "Startup of the year", title: "To be Announced", desc: "An innovative campaign that redefined digital engagement for modern audiences in Switzerland." },
+              { num: "02", cat: "Tech Leader of the year", title: "To be Announced", desc: "Driving real environmental change through powerful storytelling and community action.", offset: true },
+              { num: "03", cat: "Innovation", title: "To be Announced", desc: "Merging physical and virtual worlds for a groundbreaking product launch experience." }
             ].map((nominee, i) => (
               <motion.div
                 key={i}
@@ -575,10 +576,12 @@ export default function Home() {
             className="divide-y divide-black/10"
           >
             {[
-              { q: "Who can enter the NCS Enugu Awards?", a: "The NCS Enugu Awards are open to all Tech Enthusiasts of the Republc of Nigearia, Enugu State." },
-              { q: "What is the judging criteria?", a: "Entries are evaluated on four pillars: Strategic Challenge (20%), Creative Idea (20%), Bringing the Idea to Life (20%), and Results (40%)." },
-              { q: "When is the entry deadline?", a: "The final deadline for all 2026 entries is June 1st, 2026. Early bird rates apply until April 15th." },
-              { q: "How are the winners announced?", a: "Finalists are announced in July, with Bronze and Silver winners revealed in September. Gold and Grand Effie winners are exclusively announced at the Award Night in November." }
+              { q: "What is the NCS Enugu Innovation & Impact Awards (EIIA)?", a: "The NCS Enugu Innovation & Impact Awards is an annual initiative of the Nigeria Computer Society (NCS), Enugu State Chapter, established to recognize and celebrate individuals, startups, organizations, and institutions driving innovation, digital transformation, and technological excellence." },
+              { q: "Who can submit a nomination or apply?", a: "Nominations are open to individuals, startups, companies, public institutions, educational institutions, and student innovators whose work has made a significant impact through technology. Eligibility requirements vary by award category." },
+              { q: "How are winners selected?", a: "Winners are selected through a transparent evaluation process involving an independent panel of industry experts. Some categories may also include a public voting stage, with the final decision based on predefined judging criteria." },
+              { q: "When and where will the awards take place?", a: "The maiden edition of the NCS Enugu Innovation & Impact Awards will hold on Friday, 25 September 2026, at the Presidential Hotel, Enugu, bringing together leaders from government, academia, industry, and the technology ecosystem." },
+              { q: "How can I sponsor, partner with, or attend the event?", a: "Organizations and individuals interested in sponsoring, partnering with, or attending the awards can contact the organizing committee through the website’s Contact page or by emailing the official event email: enugustatechapter@ncs.org.ng. Sponsorship packages and partnership opportunities are available for organizations seeking to support innovation and gain visibility within the technology ecosystem." }
+
             ].map((faq, i) => (
               <motion.div
                 variants={fadeInUp}
@@ -586,18 +589,20 @@ export default function Home() {
                 className="py-8 group cursor-pointer"
                 whileHover={prefersReducedMotion ? undefined : { x: 8 }}
                 transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
               >
                 <div className="flex justify-between items-center">
                   <h4 className="text-2xl  group-hover:text-[#b38b4d] transition-colors">{faq.q}</h4>
                   <motion.div
                     className="w-8 h-8 rounded-full border border-black/20 flex items-center justify-center group-hover:border-[#b38b4d] group-hover:bg-[#b38b4d] group-hover:text-[#efe5d2] transition-all text-xl font-light"
-                    whileHover={prefersReducedMotion ? undefined : { rotate: 90, scale: 1.08 }}
+                    animate={{ rotate: openFaqIndex === i ? 45 : 0 }}
+                    whileHover={prefersReducedMotion ? undefined : { rotate: openFaqIndex === i ? 45 : 90, scale: 1.08 }}
                     transition={{ type: "spring", stiffness: 300, damping: 18 }}
                   >
                     <Plus className="w-4 h-4" />
                   </motion.div>
                 </div>
-                <div className={`mt-6 text-gray-600 font-light leading-relaxed max-w-3xl ${i === 0 ? 'block' : 'hidden'}`}>
+                <div className={`mt-6 text-gray-600 font-light leading-relaxed max-w-3xl ${openFaqIndex === i ? 'block' : 'hidden'}`}>
                   {faq.a}
                 </div>
               </motion.div>
