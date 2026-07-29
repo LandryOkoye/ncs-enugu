@@ -58,8 +58,8 @@ export default function RootLayout({
             <div className="col-span-1 md:col-span-3">
               <h4 className="font-semibold mb-6 text-[#0a5513] tracking-widest text-sm uppercase">Legal</h4>
               <ul className="space-y-4 text-base font-light text-gray-400">
-                <li><a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="/tos" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><a href="/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="/legal/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Service</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Cookie Settings</a></li>
               </ul>
             </div>
