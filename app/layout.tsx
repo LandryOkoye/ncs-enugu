@@ -53,6 +53,7 @@ export default function RootLayout({
                 <li><a href="/nominees" className="hover:text-white transition-colors">2026 Nominees</a></li>
                 <li><a href="/#faq" className="hover:text-white transition-colors">Frequently Asked</a></li>
                 <li><a href="/#contact" className="hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="/register" className="hover:text-white transition-colors text-[#c59d5f]">Register</a></li>
               </ul>
             </div>
             <div className="col-span-1 md:col-span-3">

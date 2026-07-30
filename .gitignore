@@ -17,6 +17,11 @@
 /.next/
 /out/
 
+.env.*
+.env
+CLAUDE.md
+AGENTS.md
+
 # production
 /build
 

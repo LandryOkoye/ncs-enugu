@@ -18,6 +18,7 @@ export default function Navbar() {
           <a href="/nominees" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Nominees</a>
           <a href="/#faq" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">FAQ</a>
           <a href="/#contact" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Contact</a>
+          <a href="/register" className="bg-[#070707] text-[#efe5d2] hover:bg-[#c59d5f] hover:text-[#070707] text-sm font-semibold tracking-wide transition-all px-5 py-2 rounded-full">Register</a>
         </div>
 
         <button 
@@ -36,7 +37,8 @@ export default function Navbar() {
           <a href="/#about" onClick={() => setIsOpen(false)} className="text-black text-lg font-semibold tracking-wide w-full text-center py-3 border-b border-black/10">About</a>
           <a href="/nominees" onClick={() => setIsOpen(false)} className="text-black text-lg font-semibold tracking-wide w-full text-center py-3 border-b border-black/10">Nominees</a>
           <a href="/#faq" onClick={() => setIsOpen(false)} className="text-black text-lg font-semibold tracking-wide w-full text-center py-3 border-b border-black/10">FAQ</a>
-          <a href="/#contact" onClick={() => setIsOpen(false)} className="text-black text-lg font-semibold tracking-wide w-full text-center py-3">Contact</a>
+          <a href="/#contact" onClick={() => setIsOpen(false)} className="text-black text-lg font-semibold tracking-wide w-full text-center py-3 border-b border-black/10">Contact</a>
+          <a href="/register" onClick={() => setIsOpen(false)} className="bg-[#070707] text-[#efe5d2] text-lg font-semibold tracking-wide w-full text-center py-3 rounded-xl">Register</a>
         </div>
       </div>
     </>
