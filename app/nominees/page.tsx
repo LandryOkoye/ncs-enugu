@@ -9,65 +9,65 @@ const categories = [
   {
     title: "Startup of the Year",
     nominees: [
-      { name: "TechNova Solutions", desc: "Revolutionizing e-commerce logistics.", num: "01" },
-      { name: "GreenEnergy NG", desc: "Sustainable power alternatives for SMEs.", num: "02" },
-      { name: "AgriConnect", desc: "Connecting local farmers to global markets.", num: "03" },
+      { name: "To be Announced", desc: "Revolutionizing e-commerce logistics.", num: "01" },
+      { name: "To be Announced", desc: "Sustainable power alternatives for SMEs.", num: "02" },
+      { name: "To be Announced", desc: "Connecting local farmers to global markets.", num: "03" },
     ]
   },
   {
     title: "Tech Personality of the Year",
     nominees: [
-      { name: "Chisom Eze", desc: "Founder of EnuguTech, driving digital literacy.", num: "04" },
-      { name: "Amaka Nnadi", desc: "AI Researcher and Tech Advocate.", num: "05" },
-      { name: "Obinna Uba", desc: "Pioneer in Blockchain adoption in Eastern Nigeria.", num: "06" },
+      { name: "To be Announced", desc: "Founder of EnuguTech, driving digital literacy.", num: "04" },
+      { name: "To be Announced", desc: "AI Researcher and Tech Advocate.", num: "05" },
+      { name: "To be Announced", desc: "Pioneer in Blockchain adoption in Eastern Nigeria.", num: "06" },
     ]
   },
   {
     title: "Best Innovation in Fintech",
     nominees: [
-      { name: "PaySwift", desc: "Seamless cross-border payments.", num: "07" },
-      { name: "MicroFund", desc: "Micro-loans for local market vendors.", num: "08" },
-      { name: "KoboSave", desc: "Automated savings and investment platform.", num: "09" },
+      { name: "To be Announced", desc: "Seamless cross-border payments.", num: "07" },
+      { name: "To be Announced", desc: "Micro-loans for local market vendors.", num: "08" },
+      { name: "To be Announced", desc: "Automated savings and investment platform.", num: "09" },
     ]
   },
   {
     title: "Best EdTech Solution",
     nominees: [
-      { name: "LearnMate AI", desc: "Personalized tutoring using AI.", num: "10" },
-      { name: "SkillUp Academy", desc: "Digital skills training for youths.", num: "11" },
-      { name: "EduTrack", desc: "School management and grading system.", num: "12" },
+      { name: "To be Announced", desc: "Personalized tutoring using AI.", num: "10" },
+      { name: "To be Announced", desc: "Digital skills training for youths.", num: "11" },
+      { name: "To be Announced", desc: "School management and grading system.", num: "12" },
     ]
   },
   {
     title: "Women in Tech Leadership",
     nominees: [
-      { name: "Ngozi Obi", desc: "CEO of TechWomen NG, advocating for inclusion.", num: "13" },
-      { name: "Ifunanya Okafor", desc: "Lead Engineer at CloudSoft.", num: "14" },
-      { name: "Adaeze Kalu", desc: "Founder of GirlsCode Africa.", num: "15" },
+      { name: "To be Announced", desc: "CEO of TechWomen NG, advocating for inclusion.", num: "13" },
+      { name: "To be Announced", desc: "Lead Engineer at CloudSoft.", num: "14" },
+      { name: "To be Announced", desc: "Founder of GirlsCode Africa.", num: "15" },
     ]
   },
   {
     title: "Best Tech Hub/Incubator",
     nominees: [
-      { name: "Genesys Tech Hub", desc: "Empowering the next generation of tech leaders.", num: "16" },
-      { name: "Roar Nigeria Hub", desc: "University-based incubator driving innovation.", num: "17" },
-      { name: "Digital Dreams", desc: "Fostering creative and tech entrepreneurship.", num: "18" },
+      { name: "To be Announced", desc: "Empowering the next generation of tech leaders.", num: "16" },
+      { name: "To be Announced", desc: "University-based incubator driving innovation.", num: "17" },
+      { name: "To be Announced", desc: "Fostering creative and tech entrepreneurship.", num: "18" },
     ]
   },
   {
     title: "Best Government Tech Initiative",
     nominees: [
-      { name: "Enugu SME Agency", desc: "Digital empowerment for small businesses.", num: "19" },
-      { name: "Enugu State Tech Hub", desc: "State-sponsored infrastructure for startups.", num: "20" },
-      { name: "Digital Governance Portal", desc: "Streamlining state administrative processes.", num: "21" },
+      { name: "To be Announced", desc: "Digital empowerment for small businesses.", num: "19" },
+      { name: "To be Announced", desc: "State-sponsored infrastructure for startups.", num: "20" },
+      { name: "To be Announced", desc: "Streamlining state administrative processes.", num: "21" },
     ]
   },
   {
     title: "Emerging Tech Talent",
     nominees: [
-      { name: "Chinedu Mba", desc: "19-year-old creator of the SmartFarm IoT device.", num: "22" },
-      { name: "Kamsi Ugwu", desc: "Winner of the National Coding Olympiad.", num: "23" },
-      { name: "Blessing Nweze", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
+      { name: "To be Announced", desc: "19-year-old creator of the SmartFarm IoT device.", num: "22" },
+      { name: "To be Announced", desc: "Winner of the National Coding Olympiad.", num: "23" },
+      { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
     ]
   }
 ];
@@ -130,10 +130,10 @@ export default function NomineesPage() {
       </section>
 
       {/* Categories */}
-      <div className="px-[10%] mt-20">
+      <div className="px-[10%] mt-3">
         <div className="max-w-7xl mx-auto space-y-32">
           {categories.map((category, catIndex) => (
-            <motion.section 
+            <motion.section
               key={catIndex}
               initial="hidden"
               whileInView="visible"
