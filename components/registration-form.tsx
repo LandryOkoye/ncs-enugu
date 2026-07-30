@@ -470,8 +470,7 @@ export function RegistrationForm() {
                   slots, attendance is strictly by invitation.
                 </p>
                 <p>
-                  Applicants whose profiles align with the event&apos;s target
-                  audience will receive an official{" "}
+                  If you&apos;re selected to attend, you&apos;ll receive your Official{" "}
                   <span className="text-[#c59d5f]">
                     Event Pass/Invitation
                   </span>{" "}
