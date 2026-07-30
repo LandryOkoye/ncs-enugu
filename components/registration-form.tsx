@@ -279,6 +279,7 @@ export function RegistrationForm() {
               </FieldLabel>
               <SelectField name="industry">
                 <option value="">Select industry</option>
+                <option value="web3">Web3</option>
                 <option value="technology">Technology</option>
                 <option value="fintech">Finance & Fintech</option>
                 <option value="healthcare">Healthcare</option>
