@@ -16,13 +16,12 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <a href="/#about" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">About</a>
           <a href="/nominees" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Nominees</a>
-          <a href="/#faq" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">FAQ</a>
-          <a href="/#contact" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Contact</a>
           <a href="/nominate" className="relative inline-flex items-center gap-1.5 bg-[#c59d5f] text-[#070707] hover:bg-[#b08a4e] text-sm font-bold tracking-wide transition-all px-5 py-2 rounded-full">
             <span className="absolute inset-0 rounded-full bg-[#c59d5f] animate-ping opacity-40" />
             <span className="relative z-10">Nominate</span>
           </a>
           <a href="/register" className="bg-[#070707] text-[#efe5d2] hover:bg-[#c59d5f] hover:text-[#070707] text-sm font-semibold tracking-wide transition-all px-5 py-2 rounded-full">Register</a>
+          <a href="/#faq" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">FAQ</a>
         </div>
 
         <button 
