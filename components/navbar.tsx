@@ -22,6 +22,7 @@ export default function Navbar() {
           </a>
           <a href="/register" className="bg-[#070707] text-[#efe5d2] hover:bg-[#c59d5f] hover:text-[#070707] text-sm font-semibold tracking-wide transition-all px-5 py-2 rounded-full">Register</a>
           <a href="/#faq" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">FAQ</a>
+          <a href="/#contact" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Contact</a>
         </div>
 
         <button 

@@ -96,7 +96,7 @@ export default function NominatePage() {
               {[
                 { icon: Trophy, label: "9 Flagship Award Categories" },
                 { icon: Star, label: "10 Special Recognition Categories" },
-                { icon: Calendar, label: "Ceremony: 25 September 2026" },
+                { icon: Calendar, label: "Award Night: 25 September 2026" },
                 { icon: MapPin, label: "Presidential Hotel, Enugu" },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-3">
