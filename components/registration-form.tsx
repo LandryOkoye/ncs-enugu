@@ -479,7 +479,8 @@ export function RegistrationForm() {
                 <p>
                   We appreciate your interest and look forward to welcoming you
                   to{" "}
-                  <strong className="text-[#efe5d2]/80">EIIA 2026</strong>.
+                  <strong className="t
+                  ext-[#efe5d2]/80">EIIA 2026</strong>.
                 </p>
               </div>
 

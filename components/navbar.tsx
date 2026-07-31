@@ -18,6 +18,10 @@ export default function Navbar() {
           <a href="/nominees" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Nominees</a>
           <a href="/#faq" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">FAQ</a>
           <a href="/#contact" className="text-black/70 hover:text-black text-sm font-semibold tracking-wide transition-colors">Contact</a>
+          <a href="/nominate" className="relative inline-flex items-center gap-1.5 bg-[#c59d5f] text-[#070707] hover:bg-[#b08a4e] text-sm font-bold tracking-wide transition-all px-5 py-2 rounded-full">
+            <span className="absolute inset-0 rounded-full bg-[#c59d5f] animate-ping opacity-40" />
+            <span className="relative z-10">Nominate</span>
+          </a>
           <a href="/register" className="bg-[#070707] text-[#efe5d2] hover:bg-[#c59d5f] hover:text-[#070707] text-sm font-semibold tracking-wide transition-all px-5 py-2 rounded-full">Register</a>
         </div>
 
@@ -38,6 +42,10 @@ export default function Navbar() {
           <a href="/nominees" onClick={() => setIsOpen(false)} className="text-black text-lg font-semibold tracking-wide w-full text-center py-3 border-b border-black/10">Nominees</a>
           <a href="/#faq" onClick={() => setIsOpen(false)} className="text-black text-lg font-semibold tracking-wide w-full text-center py-3 border-b border-black/10">FAQ</a>
           <a href="/#contact" onClick={() => setIsOpen(false)} className="text-black text-lg font-semibold tracking-wide w-full text-center py-3 border-b border-black/10">Contact</a>
+          <a href="/nominate" onClick={() => setIsOpen(false)} className="relative bg-[#c59d5f] text-[#070707] text-lg font-bold tracking-wide w-full text-center py-3 rounded-xl overflow-hidden">
+            <span className="absolute inset-0 bg-[#c59d5f] animate-ping opacity-30 rounded-xl" />
+            <span className="relative z-10">Nominate</span>
+          </a>
           <a href="/register" onClick={() => setIsOpen(false)} className="bg-[#070707] text-[#efe5d2] text-lg font-semibold tracking-wide w-full text-center py-3 rounded-xl">Register</a>
         </div>
       </div>
