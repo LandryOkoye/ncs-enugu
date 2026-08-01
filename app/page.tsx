@@ -492,7 +492,7 @@ export default function Home() {
             {[
               { num: "01", cat: "Startup of the year", title: "To be Announced", desc: "An innovative campaign that redefined digital engagement for modern audiences in Switzerland." },
               { num: "02", cat: "Tech Leader of the year", title: "To be Announced", desc: "Driving real environmental change through powerful storytelling and community action.", offset: true },
-              { num: "03", cat: "Innovation", title: "To be Announced", desc: "Merging physical and virtual worlds for a groundbreaking product launch experience." }
+              { num: "03", cat: "Women In Technology Impact", title: "To be Announced", desc: "Merging physical and virtual worlds for a groundbreaking product launch experience." }
             ].map((nominee, i) => (
               <motion.div
                 key={i}
