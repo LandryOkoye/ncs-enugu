@@ -66,7 +66,7 @@ export async function POST(request: Request) {
 
     const auth = getAuth()
     const sheets = google.sheets({ version: "v4", auth })
-    const sheetId = process.env.GOOGLE_NOMINATIONS_SHEET_ID ?? process.env.GOOGLE_SHEET_ID
+    const sheetId = process.env.GOOGLE_NOMINATIONS_SHEET_ID || process.env.GOOGLE_SHEET_ID
 
     if (!sheetId) {
       return NextResponse.json({ error: "Sheet not configured" }, { status: 500 })
