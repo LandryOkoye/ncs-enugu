@@ -1,8 +1,12 @@
 import { google } from "googleapis"
-import { Readable } from "stream"
+import { v2 as cloudinary } from "cloudinary"
 import { NextResponse } from "next/server"
 
-const DRIVE_FOLDER_ID = process.env.GOOGLE_DRIVE_FOLDER_ID!
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+})
 
 const SHEET_HEADERS = [
   "Timestamp",
@@ -37,42 +41,30 @@ function getAuth() {
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
       private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
     },
-    scopes: [
-      "https://www.googleapis.com/auth/spreadsheets",
-      "https://www.googleapis.com/auth/drive.file",
-    ],
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   })
 }
 
-async function uploadToDrive(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  drive: any,
-  file: File,
-  parentId: string
-): Promise<string> {
+async function uploadToCloudinary(file: File, folder: string): Promise<string> {
   const buffer = Buffer.from(await file.arrayBuffer())
-  const res = await drive.files.create({
-    requestBody: {
-      name: file.name,
-      parents: [parentId],
-    },
-    media: {
-      mimeType: file.type || "application/octet-stream",
-      body: Readable.from(buffer),
-    },
-    fields: "id,webViewLink",
+  return new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream(
+      { folder, resource_type: "auto" },
+      (err, result) => {
+        if (err || !result) return reject(err ?? new Error("Cloudinary upload failed"))
+        resolve(result.secure_url)
+      }
+    )
+    stream.end(buffer)
   })
-  return res.data.webViewLink ?? `https://drive.google.com/file/d/${res.data.id}/view`
 }
 
 export async function POST(request: Request) {
   try {
     const formData = await request.formData()
-
     const get = (key: string) => (formData.get(key) as string) ?? ""
 
     const auth = getAuth()
-    const drive = google.drive({ version: "v3", auth })
     const sheets = google.sheets({ version: "v4", auth })
     const sheetId = process.env.GOOGLE_NOMINATIONS_SHEET_ID ?? process.env.GOOGLE_SHEET_ID
 
@@ -80,30 +72,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Sheet not configured" }, { status: 500 })
     }
 
-    // Create nominee subfolder for organisation
     const nomineeName = get("nomineeName")
-    const timestamp = new Date().toISOString().slice(0, 10)
-    const subfolderName = `${nomineeName || "Nominee"} – ${timestamp}`
-
-    let folderId = DRIVE_FOLDER_ID
-    if (DRIVE_FOLDER_ID) {
-      const folderRes = await drive.files.create({
-        requestBody: {
-          name: subfolderName,
-          mimeType: "application/vnd.google-apps.folder",
-          parents: [DRIVE_FOLDER_ID],
-        },
-        fields: "id",
-      })
-      folderId = folderRes.data.id ?? DRIVE_FOLDER_ID
-    }
+    const cloudinaryFolder = `ncs-nominations/${nomineeName || "nominee"}`
 
     // Upload supporting documents
     const supportingDocFiles = formData.getAll("supportingDocs") as File[]
     const supportingDocUrls: string[] = []
     for (const file of supportingDocFiles) {
       if (file.size > 0) {
-        const url = await uploadToDrive(drive, file, folderId)
+        const url = await uploadToCloudinary(file, cloudinaryFolder)
         supportingDocUrls.push(url)
       }
     }
@@ -112,7 +89,7 @@ export async function POST(request: Request) {
     const nomineePic = formData.get("nomineePic") as File | null
     let nomineePicUrl = ""
     if (nomineePic && nomineePic.size > 0) {
-      nomineePicUrl = await uploadToDrive(drive, nomineePic, folderId)
+      nomineePicUrl = await uploadToCloudinary(nomineePic, cloudinaryFolder)
     }
 
     // Write to sheet
