@@ -319,34 +319,33 @@ export function NominationForm() {
     setError("")
 
     try {
+      const fd = new FormData()
+      fd.append("nominatingType", nominatingType)
+      fd.append("nominatorName", nominatorName)
+      fd.append("nominatorPhone", nominatorPhone)
+      fd.append("relationship", relationship === "Other" ? `Other: ${relationshipOther}` : relationship)
+      fd.append("nomineeName", nomineeName)
+      fd.append("nomineeOrg", nomineeOrg)
+      fd.append("nomineeRole", nomineeRole)
+      fd.append("nomineeState", nomineeState === "Other" ? `Other: ${nomineeStateOther}` : nomineeState)
+      fd.append("nomineeEmail", nomineeEmail)
+      fd.append("nomineePhone", nomineePhone)
+      fd.append("yearsActive", yearsActive)
+      fd.append("flagshipCategories", [...flagshipCats].join(", "))
+      fd.append("specialCategories", [...specialCats].join(", "))
+      fd.append("strongestCategory", allSelected.length === 1 ? allSelected[0] : strongestCat)
+      fd.append("impact", impact)
+      fd.append("links", links)
+      fd.append("confirmAccuracy", confirmAccuracy ? "true" : "false")
+      fd.append("confirmConsent", confirmConsent ? "true" : "false")
+      fd.append("extraNotes", extraNotes)
+      fd.append("howHeard", howHeard === "Other" ? `Other: ${howHeardOther}` : howHeard)
+      supportingDocs.forEach(f => fd.append("supportingDocs", f))
+      if (nomineePic) fd.append("nomineePic", nomineePic)
+
       const res = await fetch("/api/nominate", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          nominatingType,
-          nominatorName,
-          nominatorPhone,
-          relationship: relationship === "Other" ? `Other: ${relationshipOther}` : relationship,
-          nomineeName,
-          nomineeOrg,
-          nomineeRole,
-          nomineeState: nomineeState === "Other" ? `Other: ${nomineeStateOther}` : nomineeState,
-          nomineeEmail,
-          nomineePhone,
-          yearsActive,
-          flagshipCategories: [...flagshipCats].join(", "),
-          specialCategories: [...specialCats].join(", "),
-          strongestCategory: allSelected.length === 1 ? allSelected[0] : strongestCat,
-          impact,
-          links,
-          supportingDocsCount: supportingDocs.length,
-          supportingDocNames: supportingDocs.map(f => f.name).join(", "),
-          nomineePicName: nomineePic?.name ?? "",
-          confirmAccuracy,
-          confirmConsent,
-          extraNotes,
-          howHeard: howHeard === "Other" ? `Other: ${howHeardOther}` : howHeard,
-        }),
+        body: fd,
       })
       if (!res.ok) throw new Error("server error")
       setSubmitted(true)
