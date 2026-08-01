@@ -169,8 +169,11 @@ export async function POST(request: Request) {
     })
 
     return NextResponse.json({ success: true })
-  } catch (err) {
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const details = (err as any)?.response?.data ?? null
     console.error("Nomination error:", err)
-    return NextResponse.json({ error: "Failed to save nomination" }, { status: 500 })
+    return NextResponse.json({ error: message, details }, { status: 500 })
   }
 }
