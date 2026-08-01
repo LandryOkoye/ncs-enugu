@@ -1,0 +1,1 @@
+export const Harri_ObiSrc = "// cloudinary image url"
