@@ -1,1 +1,2 @@
-export const Harri_ObiSrc = "// cloudinary image url"
+export const Harri_Obiefule = "https://res.cloudinary.com/dlczo9et1/image/upload/v1785642259/Dr._Harrison_Obiefule-_Lead_Solana-_SuperteamNG_nenyep.png"
+export const Prince_Lawrence_Ezeh = "https://res.cloudinary.com/dlczo9et1/image/upload/v1785642466/IMG_20260802_044305_809_spbrnm.jpg"

@@ -5,6 +5,8 @@ import { motion, useReducedMotion, useScroll, useTransform, type Variants } from
 import { ArrowRight, MapPin, Mail, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
+import * as images from "@/app/assets/images";
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -490,10 +492,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: "01", cat: "Startup of the year", title: "To be Announced", desc: "An innovative campaign that redefined digital engagement for modern audiences in Switzerland." },
-              { num: "02", cat: "Tech Leader of the year", title: "To be Announced", desc: "Driving real environmental change through powerful storytelling and community action.", offset: true },
+              { num: "01", cat: "Ecosystem Impact Award", title: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG — Pioneer in Blockchain adoption in Eastern Nigeria.", image: images.Harri_Obiefule },
+              { num: "02", cat: "Public Sector Impact Award", title: "Prince Lawrence Ezeh", desc: "Driving seamless cross-border payments for underserved markets.", offset: true, image: images.Prince_Lawrence_Ezeh },
               { num: "03", cat: "Women In Technology Impact", title: "To be Announced", desc: "Merging physical and virtual worlds for a groundbreaking product launch experience." }
-            ].map((nominee, i) => (
+            ].map((nominee: { num: string; cat: string; title: string; desc: string; offset?: boolean; image?: string }, i) => (
               <motion.div
                 key={i}
                 custom={i}
@@ -511,18 +513,30 @@ export default function Home() {
                 className="group relative overflow-hidden rounded-2xl bg-[#111] border border-[#efe5d2]/5 hover:border-[#efe5d2]/20 transition-colors duration-500 cursor-pointer motion-card"
               >
                 <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
+                  {nominee.image ? (
+                    <Image
+                      src={nominee.image}
+                      alt={nominee.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <motion.div
+                      className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/10 text-9xl font-bold"
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.14, rotate: -2 }}
+                      transition={{ type: "spring", stiffness: 180, damping: 18 }}
+                    >
+                      {nominee.num}
+                    </motion.div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/25 via-[#efe5d2]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#efe5d2]/70 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                  <motion.div
-                    className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/10 text-9xl font-bold"
-                    whileHover={prefersReducedMotion ? undefined : { scale: 1.14, rotate: -2 }}
-                    transition={{ type: "spring", stiffness: 180, damping: 18 }}
-                  >
-                    {nominee.num}
-                  </motion.div>
-                  <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
-                    Pending Selection
-                  </div>
+                  {!nominee.image && (
+                    <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
+                      Pending Selection
+                    </div>
+                  )}
                 </div>
                 <div className="p-8 relative z-10">
                   <div className="text-[#c59d5f] text-xs font-bold tracking-widest mb-2 uppercase">{nominee.cat}</div>

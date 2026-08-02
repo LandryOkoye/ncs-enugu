@@ -3,9 +3,18 @@
 import { motion, Variants } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import * as images from "@/app/assets/images";
 
-const categories = [
+type Nominee = {
+  name: string;
+  desc: string;
+  num: string;
+  image?: string;
+};
+
+const categories: { title: string; nominees: Nominee[] }[] = [
   {
     title: "Startup of the Year",
     nominees: [
@@ -19,13 +28,13 @@ const categories = [
     nominees: [
       { name: "To be Announced", desc: "Founder of EnuguTech, driving digital literacy.", num: "04" },
       { name: "To be Announced", desc: "AI Researcher and Tech Advocate.", num: "05" },
-      { name: "To be Announced", desc: "Pioneer in Blockchain adoption in Eastern Nigeria.", num: "06" },
+      { name: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG — Pioneer in Blockchain adoption in Eastern Nigeria.", num: "06", image: images.Harri_Obiefule },
     ]
   },
   {
     title: "Best Innovation in Fintech",
     nominees: [
-      { name: "To be Announced", desc: "Seamless cross-border payments.", num: "07" },
+      { name: "Prince Lawrence Ezeh", desc: "Seamless cross-border payments.", num: "07", image: images.Prince_Lawrence_Ezeh },
       { name: "To be Announced", desc: "Micro-loans for local market vendors.", num: "08" },
       { name: "To be Announced", desc: "Automated savings and investment platform.", num: "09" },
     ]
@@ -158,13 +167,25 @@ export default function NomineesPage() {
                     className="group relative overflow-hidden rounded-2xl bg-[#111] border border-[#efe5d2]/5 hover:border-[#c59d5f]/30 transition-colors duration-500 cursor-pointer"
                   >
                     <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
+                      {nominee.image ? (
+                        <Image
+                          src={nominee.image}
+                          alt={nominee.name}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/5 text-8xl font-bold group-hover:text-[#c59d5f]/10 transition-colors duration-500">
+                          {nominee.num}
+                        </div>
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/5 text-8xl font-bold group-hover:text-[#c59d5f]/10 transition-colors duration-500">
-                        {nominee.num}
-                      </div>
-                      <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
-                        Pending Selection
-                      </div>
+                      {!nominee.image && (
+                        <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
+                          Pending Selection
+                        </div>
+                      )}
                     </div>
                     <div className="p-8 relative z-10 border-t border-[#efe5d2]/5 group-hover:border-[#c59d5f]/20 transition-colors">
                       <h4 className="text-xl font-light mb-3 text-[#efe5d2] group-hover:text-[#c59d5f] transition-colors">{nominee.name}</h4>
