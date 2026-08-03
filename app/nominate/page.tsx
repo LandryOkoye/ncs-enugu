@@ -121,7 +121,7 @@ export default function NominatePage() {
               Award Categories
             </p>
             <h2 className="text-2xl font-light text-[#efe5d2] leading-snug mb-5">
-              19 Award Categories
+              20 Award Categories
             </h2>
 
             <div className="flex flex-col gap-3">
