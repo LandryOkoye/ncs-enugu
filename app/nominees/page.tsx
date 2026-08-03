@@ -16,7 +16,7 @@ type Nominee = {
 
 const categories: { title: string; nominees: Nominee[] }[] = [
   {
-    title: "Startup of the Year",
+    title: "Tech Leader of the Year",
     nominees: [
       { name: "To be Announced", desc: "Revolutionizing e-commerce logistics.", num: "01" },
       { name: "To be Announced", desc: "Sustainable power alternatives for SMEs.", num: "02" },
@@ -24,7 +24,7 @@ const categories: { title: string; nominees: Nominee[] }[] = [
     ]
   },
   {
-    title: "Tech Personality of the Year",
+    title: " ⁠Ecosystem Impact Award",
     nominees: [
       { name: "To be Announced", desc: "Founder of EnuguTech, driving digital literacy.", num: "04" },
       { name: "To be Announced", desc: "AI Researcher and Tech Advocate.", num: "05" },
@@ -32,15 +32,15 @@ const categories: { title: string; nominees: Nominee[] }[] = [
     ]
   },
   {
-    title: "Best Innovation in Fintech",
+    title: "Public Sector Tech Impact Award",
     nominees: [
-      { name: "Prince Lawrence Ezeh", desc: "Seamless cross-border payments.", num: "07", image: images.Prince_Lawrence_Ezeh },
+      { name: "Prince Lawrence Ezeh", desc: "The Honorable Commissioner for Science and Technology, Enugu State.", num: "07", image: images.Prince_Lawrence_Ezeh },
       { name: "To be Announced", desc: "Micro-loans for local market vendors.", num: "08" },
       { name: "To be Announced", desc: "Automated savings and investment platform.", num: "09" },
     ]
   },
   {
-    title: "Best EdTech Solution",
+    title: "⁠Women in Technology Impact Award",
     nominees: [
       { name: "To be Announced", desc: "Personalized tutoring using AI.", num: "10" },
       { name: "To be Announced", desc: "Digital skills training for youths.", num: "11" },
@@ -48,15 +48,7 @@ const categories: { title: string; nominees: Nominee[] }[] = [
     ]
   },
   {
-    title: "Women in Tech Leadership",
-    nominees: [
-      { name: "To be Announced", desc: "CEO of TechWomen NG, advocating for inclusion.", num: "13" },
-      { name: "To be Announced", desc: "Lead Engineer at CloudSoft.", num: "14" },
-      { name: "To be Announced", desc: "Founder of GirlsCode Africa.", num: "15" },
-    ]
-  },
-  {
-    title: "Best Tech Hub/Incubator",
+    title: "⁠Digital Transformation Excellence Award",
     nominees: [
       { name: "To be Announced", desc: "Empowering the next generation of tech leaders.", num: "16" },
       { name: "To be Announced", desc: "University-based incubator driving innovation.", num: "17" },
@@ -64,18 +56,42 @@ const categories: { title: string; nominees: Nominee[] }[] = [
     ]
   },
   {
-    title: "Best Government Tech Initiative",
+    title: "⁠Innovation & Impact Award",
     nominees: [
-      { name: "To be Announced", desc: "Digital empowerment for small businesses.", num: "19" },
+      { name: "Uchenna Edeoga", desc: "Head of Africa, Hashed Emergent", num: "19", image: images.Uchenna_Edeoga },
       { name: "To be Announced", desc: "State-sponsored infrastructure for startups.", num: "20" },
       { name: "To be Announced", desc: "Streamlining state administrative processes.", num: "21" },
     ]
   },
   {
-    title: "Emerging Tech Talent",
+    title: "⁠Lifetime Achievement Award",
     nominees: [
       { name: "To be Announced", desc: "19-year-old creator of the SmartFarm IoT device.", num: "22" },
       { name: "To be Announced", desc: "Winner of the National Coding Olympiad.", num: "23" },
+      { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
+    ]
+  },
+  {
+    title: "⁠Student Technology Excellence Award",
+    nominees: [
+      { name: "To be Announced", desc: "CEO of __, advocating for inclusion.", num: "13" },
+      { name: "To be Announced", desc: "Lead Engineer at CloudSoft.", num: "14" },
+      { name: "To be Announced", desc: "Founder of __ Africa.", num: "15" },
+    ]
+  },
+  {
+    title: "9.⁠Emerging Tech Talent Award",
+    nominees: [
+      { name: "To be Announced", desc: "19-year-old creator of the SmartFarm IoT device.", num: "22" },
+      { name: "To be Announced", desc: "Winner of the National Coding Olympiad.", num: "23" },
+      { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
+    ]
+  },
+  {
+    title: " ⁠Startup Excellence Award",
+    nominees: [
+      { name: "Daniel Felix", desc: "Co-Founder of Nectarfi", num: "22", image: images.Daniel_Felix},
+      { name: "Chibuotu Amadi", desc: "Co-Founder PayCrest", num: "23" , image: images.Chibuotu_Amadi},
       { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
     ]
   }

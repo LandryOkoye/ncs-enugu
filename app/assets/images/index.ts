@@ -1,3 +1,5 @@
 export const Harri_Obiefule = "https://res.cloudinary.com/dlczo9et1/image/upload/v1785642259/Dr._Harrison_Obiefule-_Lead_Solana-_SuperteamNG_nenyep.png"
 export const Prince_Lawrence_Ezeh = "https://res.cloudinary.com/dlczo9et1/image/upload/v1785642466/IMG_20260802_044305_809_spbrnm.jpg"
 export const Uchenna_Edeoga = "https://res.cloudinary.com/dlczo9et1/image/upload/v1785728261/Uchenna_Edeoga_-_Head_of_Africa_Hashed_Emergent_1_i4syhy.jpg"
+export const Daniel_Felix = "https://res.cloudinary.com/dlczo9et1/image/upload/v1785728033/Daniel_Felix-_CEO_Nectarfi_eyepxh.jpg"
+export const Chibuotu_Amadi = "https://res.cloudinary.com/dlczo9et1/image/upload/v1785728034/Chibuotu_Amadi-_Co-foundern_Paycrest_paoeoy.jpg"
