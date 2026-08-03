@@ -55,10 +55,10 @@ export default function NominatePage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-[#c59d5f]/5 blur-3xl" />
 
           {/* Trophy icon centered */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center mt-50">
             <div className="flex flex-col items-center gap-4">
-              <div className="w-28 h-28 rounded-full bg-[#c59d5f]/10 border border-[#c59d5f]/20 flex items-center justify-center">
-                <Trophy className="w-14 h-14 text-[#c59d5f]/70" />
+              <div className="w-28 h-28 flex items-center justify-center">
+                <img src="/NCS 2.png" alt="EIIA Logo"/>
               </div>
               <div className="text-center">
                 <p className="text-[#c59d5f] text-[10px] font-bold tracking-[0.3em] uppercase mb-2">
