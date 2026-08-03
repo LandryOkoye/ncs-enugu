@@ -28,7 +28,7 @@ const categories: { title: string; nominees: Nominee[] }[] = [
     nominees: [
       { name: "To be Announced", desc: "Founder of EnuguTech, driving digital literacy.", num: "04" },
       { name: "To be Announced", desc: "AI Researcher and Tech Advocate.", num: "05" },
-      { name: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG — Pioneer in Blockchain adoption in Eastern Nigeria.", num: "06", image: images.Harri_Obiefule },
+      { name: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG, Founder Harrison Obiefule foundation", num: "06", image: images.Harri_Obiefule },
     ]
   },
   {
@@ -80,7 +80,7 @@ const categories: { title: string; nominees: Nominee[] }[] = [
     ]
   },
   {
-    title: "9.⁠Emerging Tech Talent Award",
+    title: "⁠Emerging Tech Talent Award",
     nominees: [
       { name: "To be Announced", desc: "19-year-old creator of the SmartFarm IoT device.", num: "22" },
       { name: "To be Announced", desc: "Winner of the National Coding Olympiad.", num: "23" },
@@ -88,13 +88,21 @@ const categories: { title: string; nominees: Nominee[] }[] = [
     ]
   },
   {
-    title: " ⁠Startup Excellence Award",
+    title: "Startup Excellence Award",
     nominees: [
-      { name: "Daniel Felix", desc: "Co-Founder of Nectarfi", num: "22", image: images.Daniel_Felix},
-      { name: "Chibuotu Amadi", desc: "Co-Founder PayCrest", num: "23" , image: images.Chibuotu_Amadi},
+      { name: "To be Announced", desc: "startup excellence ", num: "22" },
+      { name: "To be Announced", desc: "Winner of the National Coding Olympiad.", num: "23" },
       { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
     ]
   }
+  // {
+  //   title: " ⁠Startup Excellence Award",
+  //   nominees: [
+  //     { name: "Daniel Felix", desc: "Co-Founder of Nectarfi", num: "22", image: images.Daniel_Felix},
+  //     { name: "Chibuotu Amadi", desc: "Co-Founder PayCrest", num: "23" , image: images.Chibuotu_Amadi},
+  //     { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
+  //   ]
+  // }
 ];
 
 export default function NomineesPage() {
