@@ -496,7 +496,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: "01", cat: "Ecosystem Impact Award", title: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG — Pioneer in Blockchain adoption in Eastern Nigeria.", image: images.Harri_Obiefule },
+              { num: "01", cat: "Ecosystem Impact Award", title: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG — Founder Harrison Obiefule Foundation", image: images.Harri_Obiefule },
               { num: "02", cat: "Public Sector Impact Award", title: "Prince Lawrence Ezeh", desc: "The Honorable Commissioner for Innovation, Science and Technology", offset: true, image: images.Prince_Lawrence_Ezeh },
               { num: "03", cat: "⁠Innovation & Impact Award", title: "Uchena Edeoga", desc: "Head of Africa, Hashed Emergent", image: images.Uchenna_Edeoga }
             ].map((nominee: { num: string; cat: string; title: string; desc: string; offset?: boolean; image?: string }, i) => (

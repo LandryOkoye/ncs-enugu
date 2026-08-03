@@ -28,7 +28,7 @@ const categories: { title: string; nominees: Nominee[] }[] = [
     nominees: [
       { name: "To be Announced", desc: "Founder of EnuguTech, driving digital literacy.", num: "04" },
       { name: "To be Announced", desc: "AI Researcher and Tech Advocate.", num: "05" },
-      { name: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG, Founder Harrison Obiefule foundation", num: "06", image: images.Harri_Obiefule },
+      { name: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG, Founder Harrison Obiefule Foundation", num: "06", image: images.Harri_Obiefule },
     ]
   },
   {
