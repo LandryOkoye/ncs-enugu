@@ -189,7 +189,7 @@ export default function NomineesPage() {
                           alt={nominee.name}
                           fill
                           sizes="(max-width: 768px) 100vw, 33vw"
-                          className="object-cover"
+                          className="object-cover object-top"
                         />
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/5 text-8xl font-bold group-hover:text-[#c59d5f]/10 transition-colors duration-500">
