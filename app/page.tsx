@@ -410,65 +410,69 @@ export default function Home() {
               variants={staggerContainer}
               className="w-full lg:w-1/2 flex flex-col justify-center items-center mt-20 lg:mt-0"
             >
-              {/* Top Row */}
-              <div className="flex justify-center items-center gap-4 md:gap-8 mb-12 md:mb-4 z-10 w-full">
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[4deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
-                >
-                  keynotes presentations
-                </motion.div>
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[3deg] hover:rotate-[0deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
-                >
-                  leadership conversations
-                </motion.div>
-              </div>
+              <div className="w-full overflow-x-auto overflow-y-hidden no-scrollbar md:overflow-visible -mx-6 md:mx-0">
+                <div className="flex flex-col min-w-max md:min-w-0 md:w-full mx-auto px-2 py-6 md:px-0 md:py-0">
+                  {/* Top Row */}
+                  <div className="flex justify-center items-center gap-4 md:gap-8 mb-12 md:mb-4 z-10 w-full">
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[4deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
+                    >
+                      keynotes presentations
+                    </motion.div>
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[3deg] hover:rotate-[0deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                    >
+                      leadership conversations
+                    </motion.div>
+                  </div>
 
-              {/* Middle Row */}
-              <div className="flex justify-center items-center gap-4 md:gap-8 mb-2 md:mb-4 z-20 w-full">
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[3deg] hover:-rotate-[0deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
-                >
-                  awards ceremony
-                </motion.div>
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[5deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
-                >
-                  networking sessions
-                </motion.div>
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[4deg] hover:-rotate-[2deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
-                >
-                  sponsor/partner showcase
-                </motion.div>
-              </div>
+                  {/* Middle Row */}
+                  <div className="flex justify-center items-center gap-4 md:gap-8 mb-2 md:mb-4 z-20 w-full">
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[3deg] hover:-rotate-[0deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
+                    >
+                      awards ceremony
+                    </motion.div>
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[5deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                    >
+                      networking sessions
+                    </motion.div>
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[4deg] hover:-rotate-[2deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
+                    >
+                      sponsor/partner showcase
+                    </motion.div>
+                  </div>
 
-              {/* Bottom Row */}
-              <div className="flex justify-center items-center gap-4 md:gap- z-30 w-full">
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[4deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
-                >
-                  cultural experience
-                </motion.div>
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[3deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
-                >
-                  ecosystem recognition
-                </motion.div>
+                  {/* Bottom Row */}
+                  <div className="flex justify-center items-center gap-4 md:gap- z-30 w-full">
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[4deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                    >
+                      cultural experience
+                    </motion.div>
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[3deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
+                    >
+                      ecosystem recognition
+                    </motion.div>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
