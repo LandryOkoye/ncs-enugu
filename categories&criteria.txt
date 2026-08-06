@@ -1,0 +1,76 @@
+Nomination Categories & Criteria
+
+
+Individual & Leadership Categories
+1. Tech Leader of the Year
+Definition: Exceptional leadership in technology and innovation, demonstrated through vision, execution, and influence on the ecosystem.
+Eligibility: Individual in a leadership role (founder, executive, hub lead, senior technologist) active in Enugu's tech ecosystem in the last 24 months.
+Evidence: Leadership track record, team/organization growth metrics, strategic initiatives led, third-party references (min. 2).
+2. Innovation & Impact Award
+Definition: Organizations or individuals creating measurable innovation and impact.
+Eligibility: This is open to individuals or organizations; They must demonstrate a specific innovation (product, service, model, or process) with quantifiable outcomes.
+Evidence: The description of innovation, baseline vs. current impact data, user/beneficiary numbers, independent validation where possible.
+3. Student Technology Excellence Award
+Definition: Recognizes promising young innovators still in formal education.
+Eligibility: For currently enrolled students (secondary or tertiary institution) in Enugu State, or Enugu-origin students enrolled elsewhere.
+Evidence: The project description, proof of enrollment, mentor/lecturer endorsement, evidence of originality (code repo, prototype, competition record).
+4. Startup Excellence Award
+Definition: Recognizes a startup demonstrating strong growth, innovation, and market traction.
+Eligibility: A registered and operating startup, HQ or primary operations in Enugu State, founded within the last 5 years.
+Evidence: Company registration, traction metrics (revenue, users, funding), product overview, founder bios.
+5. Women in Technology Impact Award
+Definition: Recognizes a woman making significant contributions to technology in Enugu either as a builder, leader, educator, or advocate.
+Eligibility: A woman who is active in Enugu's tech ecosystem.
+Evidence: Contribution summary, impact evidence, references, evidence of mentorship/advocacy where applicable.
+6. Digital Transformation Excellence Award
+Definition: Recognizes an organization that has successfully driven digital transformation internally or for its sector.
+Eligibility: An organization (private or nonprofit) that has executed a digital transformation initiative with documented before/after outcomes.
+Evidence: Case study, metrics (efficiency, cost, revenue, reach), stakeholder testimony.
+7. Public Sector Tech Impact Award
+Definition: Recognizes a government agency, public institution, or public-private initiative improving service delivery through technology.
+Eligibility: A public sector body or public-facing initiative operating in Enugu State.
+Evidence: Description of initiative, citizen/user impact data, efficiency or transparency gains, official endorsement.
+8. Lifetime Achievement Award
+Definition: Honors an individual with a sustained, multi-year record of contribution to Enugu's technology ecosystem.
+Eligibility: Minimum 7 years of relevant contribution; nomination by third party only (no self-nomination).
+Evidence: Career/contribution timeline, testimonials (min. 3), evidence of long-term ecosystem influence.
+9. Emerging Tech Talent Award
+Definition: Recognizes an early-career individual (outside formal education, distinct from the Student award) showing exceptional promise and rapid growth in technology skill, output, or influence.
+Eligibility: Individual with ≤3 years of professional/practical experience in tech (paid, freelance, or self-taught/open-source track record counts); not currently enrolled as a student.
+Evidence: Portfolio or project history, growth trajectory (skills, roles, or output over time), employer/mentor/community endorsement, evidence of self-driven learning or contribution (e.g., open-source commits, freelance work, competition placements).
+10. Ecosystem Impact Award
+Definition: Recognizes an individual or organization whose work has measurably strengthened the broader Enugu tech ecosystem itself, not just their own product or company, but the environment others build in (talent pipeline, funding access, collaboration infrastructure, policy, community cohesion). Distinct from the Innovation & Impact Award (which rewards a specific innovation) and the Ecosystem Builder Recognition (a lighter committee-level nod), this is a flagship-tier award for sustained, ecosystem-wide impact.
+Eligibility: Individual or organization active in Enugu's tech ecosystem for at least 18 months, with initiatives or work that benefit multiple organizations, founders, or individuals beyond their own.
+Evidence: Description of ecosystem-level initiative(s) (e.g., funding facilitated, partnerships brokered, talent placed, events/programs run, policy influenced), number and breadth of beneficiaries, third-party testimony from at least two unrelated organizations/individuals who benefited.
+
+
+
+Committee Recognition Categories
+These are lighter-weight, panel-nominated recognitions (self-nomination optional) intended to cast a wider net beyond flagship-award competitors. Committee Recognition categories carry physical awards/certificates and pla
+
+/* Table presentation */
+Category
+Focus
+Technology Hub Recognition
+Hubs/incubators that are driving community, training, or startup support
+Artificial Intelligence Innovation Recognition
+Notable AI/ML product, research, or application work
+Cybersecurity Innovation Recognition
+Security tooling, awareness programs, or research
+Blockchain Innovation Recognition
+Blockchain/Web3 products, protocols, or education
+FinTech Innovation Recognition
+Financial technology products or services with real adoption
+EdTech Innovation Recognition
+Technology improving access to or quality of education
+Robotics & Emerging Technology Recognition
+Hardware, IoT, robotics, or other frontier tech
+Research Excellence Recognition
+Published or applied research advancing the tech field
+Ecosystem Builder Recognition
+Individuals/organizations building community infrastructure (events, networks, policy advocacy)
+Unsung Hero Recognition
+High-impact contributors with low public visibility to be nominated by peers, not self-nominated
+
+
+Committee Recognition nominees are evaluated on a simplified 3-criterion rubric: relevance to category (40%), evidence of contribution (40%), community/peer support for the nomination (20%).

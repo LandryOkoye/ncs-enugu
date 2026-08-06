@@ -3,11 +3,20 @@
 import { motion, Variants } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import * as images from "@/app/assets/images";
 
-const categories = [
+type Nominee = {
+  name: string;
+  desc: string;
+  num: string;
+  image?: string;
+};
+
+const categories: { title: string; nominees: Nominee[] }[] = [
   {
-    title: "Startup of the Year",
+    title: "Tech Leader of the Year",
     nominees: [
       { name: "To be Announced", desc: "Revolutionizing e-commerce logistics.", num: "01" },
       { name: "To be Announced", desc: "Sustainable power alternatives for SMEs.", num: "02" },
@@ -15,23 +24,23 @@ const categories = [
     ]
   },
   {
-    title: "Tech Personality of the Year",
+    title: " ⁠Ecosystem Impact Award",
     nominees: [
       { name: "To be Announced", desc: "Founder of EnuguTech, driving digital literacy.", num: "04" },
       { name: "To be Announced", desc: "AI Researcher and Tech Advocate.", num: "05" },
-      { name: "To be Announced", desc: "Pioneer in Blockchain adoption in Eastern Nigeria.", num: "06" },
+      { name: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG, Founder Harrison Obiefule Foundation", num: "06", image: images.Harri_Obiefule },
     ]
   },
   {
-    title: "Best Innovation in Fintech",
+    title: "Public Sector Tech Impact Award",
     nominees: [
-      { name: "To be Announced", desc: "Seamless cross-border payments.", num: "07" },
+      { name: "Prince Lawrence Ezeh", desc: "The Honorable Commissioner for Science and Technology, Enugu State.", num: "07", image: images.Prince_Lawrence_Ezeh },
       { name: "To be Announced", desc: "Micro-loans for local market vendors.", num: "08" },
       { name: "To be Announced", desc: "Automated savings and investment platform.", num: "09" },
     ]
   },
   {
-    title: "Best EdTech Solution",
+    title: "⁠Women in Technology Impact Award",
     nominees: [
       { name: "To be Announced", desc: "Personalized tutoring using AI.", num: "10" },
       { name: "To be Announced", desc: "Digital skills training for youths.", num: "11" },
@@ -39,15 +48,7 @@ const categories = [
     ]
   },
   {
-    title: "Women in Tech Leadership",
-    nominees: [
-      { name: "To be Announced", desc: "CEO of TechWomen NG, advocating for inclusion.", num: "13" },
-      { name: "To be Announced", desc: "Lead Engineer at CloudSoft.", num: "14" },
-      { name: "To be Announced", desc: "Founder of GirlsCode Africa.", num: "15" },
-    ]
-  },
-  {
-    title: "Best Tech Hub/Incubator",
+    title: "⁠Digital Transformation Excellence Award",
     nominees: [
       { name: "To be Announced", desc: "Empowering the next generation of tech leaders.", num: "16" },
       { name: "To be Announced", desc: "University-based incubator driving innovation.", num: "17" },
@@ -55,21 +56,53 @@ const categories = [
     ]
   },
   {
-    title: "Best Government Tech Initiative",
+    title: "⁠Innovation & Impact Award",
     nominees: [
-      { name: "To be Announced", desc: "Digital empowerment for small businesses.", num: "19" },
+      { name: "Uchenna Edeoga", desc: "Head of Africa, Hashed Emergent", num: "19", image: images.Uchenna_Edeoga },
       { name: "To be Announced", desc: "State-sponsored infrastructure for startups.", num: "20" },
       { name: "To be Announced", desc: "Streamlining state administrative processes.", num: "21" },
     ]
   },
   {
-    title: "Emerging Tech Talent",
+    title: "⁠Lifetime Achievement Award",
     nominees: [
       { name: "To be Announced", desc: "19-year-old creator of the SmartFarm IoT device.", num: "22" },
       { name: "To be Announced", desc: "Winner of the National Coding Olympiad.", num: "23" },
       { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
     ]
+  },
+  {
+    title: "⁠Student Technology Excellence Award",
+    nominees: [
+      { name: "To be Announced", desc: "CEO of __, advocating for inclusion.", num: "13" },
+      { name: "To be Announced", desc: "Lead Engineer at CloudSoft.", num: "14" },
+      { name: "To be Announced", desc: "Founder of __ Africa.", num: "15" },
+    ]
+  },
+  {
+    title: "⁠Emerging Tech Talent Award",
+    nominees: [
+      { name: "To be Announced", desc: "19-year-old creator of the SmartFarm IoT device.", num: "22" },
+      { name: "To be Announced", desc: "Winner of the National Coding Olympiad.", num: "23" },
+      { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
+    ]
+  },
+  {
+    title: "Startup Excellence Award",
+    nominees: [
+      { name: "To be Announced", desc: "startup excellence ", num: "22" },
+      { name: "To be Announced", desc: "Winner of the National Coding Olympiad.", num: "23" },
+      { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
+    ]
   }
+  // {
+  //   title: " ⁠Startup Excellence Award",
+  //   nominees: [
+  //     { name: "Daniel Felix", desc: "Co-Founder of Nectarfi", num: "22", image: images.Daniel_Felix},
+  //     { name: "Chibuotu Amadi", desc: "Co-Founder PayCrest", num: "23" , image: images.Chibuotu_Amadi},
+  //     { name: "To be Announced", desc: "Self-taught developer building civic-tech solutions.", num: "24" },
+  //   ]
+  // }
 ];
 
 export default function NomineesPage() {
@@ -158,13 +191,25 @@ export default function NomineesPage() {
                     className="group relative overflow-hidden rounded-2xl bg-[#111] border border-[#efe5d2]/5 hover:border-[#c59d5f]/30 transition-colors duration-500 cursor-pointer"
                   >
                     <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
+                      {nominee.image ? (
+                        <Image
+                          src={nominee.image}
+                          alt={nominee.name}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover object-top"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/5 text-8xl font-bold group-hover:text-[#c59d5f]/10 transition-colors duration-500">
+                          {nominee.num}
+                        </div>
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/5 text-8xl font-bold group-hover:text-[#c59d5f]/10 transition-colors duration-500">
-                        {nominee.num}
-                      </div>
-                      <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
-                        Pending Selection
-                      </div>
+                      {!nominee.image && (
+                        <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
+                          Pending Selection
+                        </div>
+                      )}
                     </div>
                     <div className="p-8 relative z-10 border-t border-[#efe5d2]/5 group-hover:border-[#c59d5f]/20 transition-colors">
                       <h4 className="text-xl font-light mb-3 text-[#efe5d2] group-hover:text-[#c59d5f] transition-colors">{nominee.name}</h4>

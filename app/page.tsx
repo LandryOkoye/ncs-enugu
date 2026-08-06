@@ -5,6 +5,8 @@ import { motion, useReducedMotion, useScroll, useTransform, type Variants } from
 import { ArrowRight, MapPin, Mail, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
+import * as images from "@/app/assets/images";
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -408,65 +410,69 @@ export default function Home() {
               variants={staggerContainer}
               className="w-full lg:w-1/2 flex flex-col justify-center items-center mt-20 lg:mt-0"
             >
-              {/* Top Row */}
-              <div className="flex justify-center items-center gap-4 md:gap-8 mb-12 md:mb-4 z-10 w-full">
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[4deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
-                >
-                  keynotes presentations
-                </motion.div>
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[3deg] hover:rotate-[0deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
-                >
-                  leadership conversations
-                </motion.div>
-              </div>
+              <div className="w-full overflow-x-auto overflow-y-hidden no-scrollbar md:overflow-visible -mx-6 md:mx-0">
+                <div className="flex flex-col min-w-max md:min-w-0 md:w-full mx-auto px-2 py-6 md:px-0 md:py-0">
+                  {/* Top Row */}
+                  <div className="flex justify-center items-center gap-4 md:gap-8 mb-12 md:mb-4 z-10 w-full">
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[4deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
+                    >
+                      keynotes presentations
+                    </motion.div>
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[3deg] hover:rotate-[0deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                    >
+                      leadership conversations
+                    </motion.div>
+                  </div>
 
-              {/* Middle Row */}
-              <div className="flex justify-center items-center gap-4 md:gap-8 mb-2 md:mb-4 z-20 w-full">
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[3deg] hover:-rotate-[0deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
-                >
-                  awards ceremony
-                </motion.div>
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[5deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
-                >
-                  networking sessions
-                </motion.div>
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[4deg] hover:-rotate-[2deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
-                >
-                  sponsor/partner showcase
-                </motion.div>
-              </div>
+                  {/* Middle Row */}
+                  <div className="flex justify-center items-center gap-4 md:gap-8 mb-2 md:mb-4 z-20 w-full">
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[3deg] hover:-rotate-[0deg] transition-all cursor-pointer border border-black/5 z-10 font-normal shrink-0"
+                    >
+                      awards ceremony
+                    </motion.div>
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[5deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                    >
+                      networking sessions
+                    </motion.div>
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[4deg] hover:-rotate-[2deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
+                    >
+                      sponsor/partner showcase
+                    </motion.div>
+                  </div>
 
-              {/* Bottom Row */}
-              <div className="flex justify-center items-center gap-4 md:gap- z-30 w-full">
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[4deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
-                >
-                  cultural experience
-                </motion.div>
-                <motion.div
-                  variants={fadeInUp}
-                  whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
-                  className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[3deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
-                >
-                  ecosystem recognition
-                </motion.div>
+                  {/* Bottom Row */}
+                  <div className="flex justify-center items-center gap-4 md:gap- z-30 w-full">
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-[#c59d5f] text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 rotate-[4deg] hover:rotate-[2deg] transition-all cursor-pointer border border-black/5 z-20 font-normal shrink-0"
+                    >
+                      cultural experience
+                    </motion.div>
+                    <motion.div
+                      variants={fadeInUp}
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.05, zIndex: 50 }}
+                      className="bg-white text-black rounded-[3rem] px-6 md:px-10 py-4 md:py-6 text-lg md:text-2xl shadow-xl shadow-black/5 -rotate-[6deg] hover:-rotate-[3deg] transition-all cursor-pointer border border-black/5 z-30 font-normal shrink-0"
+                    >
+                      ecosystem recognition
+                    </motion.div>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
@@ -490,10 +496,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: "01", cat: "Startup of the year", title: "To be Announced", desc: "An innovative campaign that redefined digital engagement for modern audiences in Switzerland." },
-              { num: "02", cat: "Tech Leader of the year", title: "To be Announced", desc: "Driving real environmental change through powerful storytelling and community action.", offset: true },
-              { num: "03", cat: "Women In Technology Impact", title: "To be Announced", desc: "Merging physical and virtual worlds for a groundbreaking product launch experience." }
-            ].map((nominee, i) => (
+              { num: "01", cat: "Ecosystem Impact Award", title: "Dr. Harrison Obiefule", desc: "Lead Solana, SuperteamNG — Founder Harrison Obiefule Foundation", image: images.Harri_Obiefule },
+              { num: "02", cat: "Public Sector Impact Award", title: "Prince Lawrence Ezeh", desc: "The Honorable Commissioner for Innovation, Science and Technology", offset: true, image: images.Prince_Lawrence_Ezeh },
+              { num: "03", cat: "⁠Innovation & Impact Award", title: "Uchena Edeoga", desc: "Head of Africa, Hashed Emergent", image: images.Uchenna_Edeoga }
+            ].map((nominee: { num: string; cat: string; title: string; desc: string; offset?: boolean; image?: string }, i) => (
               <motion.div
                 key={i}
                 custom={i}
@@ -511,18 +517,30 @@ export default function Home() {
                 className="group relative overflow-hidden rounded-2xl bg-[#111] border border-[#efe5d2]/5 hover:border-[#efe5d2]/20 transition-colors duration-500 cursor-pointer motion-card"
               >
                 <div className="aspect-[4/3] bg-[#1a1a1a] relative overflow-hidden">
+                  {nominee.image ? (
+                    <Image
+                      src={nominee.image}
+                      alt={nominee.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover object-top"
+                    />
+                  ) : (
+                    <motion.div
+                      className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/10 text-9xl font-bold"
+                      whileHover={prefersReducedMotion ? undefined : { scale: 1.14, rotate: -2 }}
+                      transition={{ type: "spring", stiffness: 180, damping: 18 }}
+                    >
+                      {nominee.num}
+                    </motion.div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#c59d5f]/25 via-[#efe5d2]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#efe5d2]/70 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                  <motion.div
-                    className="absolute inset-0 flex items-center justify-center text-[#efe5d2]/10 text-9xl font-bold"
-                    whileHover={prefersReducedMotion ? undefined : { scale: 1.14, rotate: -2 }}
-                    transition={{ type: "spring", stiffness: 180, damping: 18 }}
-                  >
-                    {nominee.num}
-                  </motion.div>
-                  <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
-                    Pending Selection
-                  </div>
+                  {!nominee.image && (
+                    <div className="absolute top-4 right-4 bg-[#070707]/80 backdrop-blur-md border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-widest uppercase py-1.5 px-3 rounded-full z-10">
+                      Pending Selection
+                    </div>
+                  )}
                 </div>
                 <div className="p-8 relative z-10">
                   <div className="text-[#c59d5f] text-xs font-bold tracking-widest mb-2 uppercase">{nominee.cat}</div>

@@ -1,0 +1,226 @@
+NCS Enugu Innovation & Impact Awards 2026 /* Header */
+Nomination Framework  /* SubHeader */
+
+
+1. Purpose & Guiding Principles
+The NCS Enugu Innovation & Impact Awards 2026 exists to identify, celebrate, and amplify the individuals and institutions driving Enugu State's technology ecosystem forward across leadership, innovation, entrepreneurship, education, research, and digital transformation.
+The framework is built on five principles:
+Credibility: Our nominations must be based on evidence and not popularity.
+Transparency: The criteria, process, and timelines must be published publicly before nominations open.
+Fairness: Every nominee must be assessed against the same rubric within their category.
+Impact over prestige: We must focus on measurable outcomes over titles or visibility.
+Inclusiveness: The framework must be designed to actively invite nominations from underrepresented groups and lesser-known but high-impact contributors.
+
+
+
+2. Governance Structure (Proposed)
+/* Table presentation */
+Body
+Role
+Awards Steering Committee (ASC)
+Owns the overall process, approves final category list, resolves disputes, ratifies final winners
+Nomination Review Panel (NRP)
+Screens nominations for eligibility and completeness
+Category Judging Panels (CJPs)
+Score eligible nominees against category rubrics; 3–5 independent judges per category, with relevant domain expertise
+Verification Desk
+Fact-checks claims, impact figures, and credentials submitted in nomination forms
+
+/*bullet point*/
+Conflict of interest rule: Any panel or committee member with a personal, financial, or organizational relationship to a nominee must recuse themselves from scoring that nominee and must declare the conflict in writing to the ASC.
+
+3. Nomination Categories & Criteria
+Each category below includes: definition, eligibility, evidence required, and scoring weighting.
+Individual & Leadership Categories
+1. Tech Leader of the Year
+Definition: Exceptional leadership in technology and innovation, demonstrated through vision, execution, and influence on the ecosystem.
+Eligibility: Individual in a leadership role (founder, executive, hub lead, senior technologist) active in Enugu's tech ecosystem in the last 24 months.
+Evidence: Leadership track record, team/organization growth metrics, strategic initiatives led, third-party references (min. 2).
+Scoring weight: Leadership impact (40%), innovation vision (30%), ecosystem contribution (20%), peer/industry recognition (10%).
+2. Innovation & Impact Award
+Definition: Organizations or individuals creating measurable innovation and impact.
+Eligibility: This is open to individuals or organizations; They must demonstrate a specific innovation (product, service, model, or process) with quantifiable outcomes.
+Evidence: The description of innovation, baseline vs. current impact data, user/beneficiary numbers, independent validation where possible.
+Scoring weight: Originality (25%), measurable impact (35%), scalability (20%), sustainability (20%).
+3. Student Technology Excellence Award
+Definition: Recognizes promising young innovators still in formal education.
+Eligibility: For currently enrolled students (secondary or tertiary institution) in Enugu State, or Enugu-origin students enrolled elsewhere.
+Evidence: The project description, proof of enrollment, mentor/lecturer endorsement, evidence of originality (code repo, prototype, competition record).
+Scoring weight: Creativity (30%), technical execution (30%), potential impact (25%), presentation/clarity (15%).
+4. Startup Excellence Award
+Definition: Recognizes a startup demonstrating strong growth, innovation, and market traction.
+Eligibility: A registered and operating startup, HQ or primary operations in Enugu State, founded within the last 5 years.
+Evidence: Company registration, traction metrics (revenue, users, funding), product overview, founder bios.
+Scoring weight: Innovation (25%), traction/growth (30%), team capability (20%), market potential (25%).
+5. Women in Technology Impact Award
+Definition: Recognizes a woman making significant contributions to technology in Enugu either as a builder, leader, educator, or advocate.
+Eligibility: A woman who is active in Enugu's tech ecosystem.
+Evidence: Contribution summary, impact evidence, references, evidence of mentorship/advocacy where applicable.
+Scoring weight: Technical/professional achievement (35%), impact on others (mentorship, advocacy) (30%), innovation (20%), industry recognition (15%).
+6. Digital Transformation Excellence Award
+Definition: Recognizes an organization that has successfully driven digital transformation internally or for its sector.
+Eligibility: An organization (private or nonprofit) that has executed a digital transformation initiative with documented before/after outcomes.
+Evidence: Case study, metrics (efficiency, cost, revenue, reach), stakeholder testimony.
+Scoring weight: Scope of transformation (30%), measurable results (35%), innovation in approach (20%), replicability (15%).
+7. Public Sector Tech Impact Award
+Definition: Recognizes a government agency, public institution, or public-private initiative improving service delivery through technology.
+Eligibility: A public sector body or public-facing initiative operating in Enugu State.
+Evidence: Description of initiative, citizen/user impact data, efficiency or transparency gains, official endorsement.
+Scoring weight: Public value created (35%), innovation (25%), scale of adoption (25%), sustainability (15%).
+8. Lifetime Achievement Award
+Definition: Honors an individual with a sustained, multi-year record of contribution to Enugu's technology ecosystem.
+Eligibility: Minimum 7 years of relevant contribution; nomination by third party only (no self-nomination).
+Evidence: Career/contribution timeline, testimonials (min. 3), evidence of long-term ecosystem influence.
+Scoring weight: Decided by ASC review and panel consensus rather than numeric scoring, given the honorary nature of the award.
+9. Emerging Tech Talent Award
+Definition: Recognizes an early-career individual (outside formal education, distinct from the Student award) showing exceptional promise and rapid growth in technology skill, output, or influence.
+Eligibility: Individual with ≤3 years of professional/practical experience in tech (paid, freelance, or self-taught/open-source track record counts); not currently enrolled as a student.
+Evidence: Portfolio or project history, growth trajectory (skills, roles, or output over time), employer/mentor/community endorsement, evidence of self-driven learning or contribution (e.g., open-source commits, freelance work, competition placements).
+Scoring weight: Growth trajectory (30%), technical/practical skill (30%), initiative & self-drive (25%), community or peer recognition (15%).
+10. Ecosystem Impact Award
+Definition: Recognizes an individual or organization whose work has measurably strengthened the broader Enugu tech ecosystem itself — not just their own product or company, but the environment others build in (talent pipeline, funding access, collaboration infrastructure, policy, community cohesion). Distinct from the Innovation & Impact Award (which rewards a specific innovation) and the Ecosystem Builder Recognition (a lighter committee-level nod), this is a flagship-tier award for sustained, ecosystem-wide impact.
+Eligibility: Individual or organization active in Enugu's tech ecosystem for at least 18 months, with initiatives or work that benefit multiple organizations, founders, or individuals beyond their own.
+Evidence: Description of ecosystem-level initiative(s) (e.g., funding facilitated, partnerships brokered, talent placed, events/programs run, policy influenced), number and breadth of beneficiaries, third-party testimony from at least two unrelated organizations/individuals who benefited.
+Scoring weight: Breadth of impact across the ecosystem (35%), depth/sustainability of impact (25%), initiative & originality (20%), independent testimony strength (20%).
+
+
+
+
+
+Committee Recognition Categories
+These are lighter-weight, panel-nominated recognitions (self-nomination optional) intended to cast a wider net beyond flagship-award competitors. Committee Recognition categories carry physical awards/certificates and pla
+/* Table presentation */
+Category
+Focus
+Technology Hub Recognition
+Hubs/incubators that are driving community, training, or startup support
+Artificial Intelligence Innovation Recognition
+Notable AI/ML product, research, or application work
+Cybersecurity Innovation Recognition
+Security tooling, awareness programs, or research
+Blockchain Innovation Recognition
+Blockchain/Web3 products, protocols, or education
+FinTech Innovation Recognition
+Financial technology products or services with real adoption
+EdTech Innovation Recognition
+Technology improving access to or quality of education
+Robotics & Emerging Technology Recognition
+Hardware, IoT, robotics, or other frontier tech
+Research Excellence Recognition
+Published or applied research advancing the tech field
+Ecosystem Builder Recognition
+Individuals/organizations building community infrastructure (events, networks, policy advocacy)
+Unsung Hero Recognition
+High-impact contributors with low public visibility to be nominated by peers, not self-nominated
+
+
+Committee Recognition nominees are evaluated on a simplified 3-criterion rubric: relevance to category (40%), evidence of contribution (40%), community/peer support for the nomination (20%).
+4. Nomination Process
+Step 1 — Launch Framework Online
+Publish this nomination framework publicly across NCS Enugu channels, partner hubs, and social media, so categories, criteria, and process are visible and transparent before any submissions come in.
+Step 2 — Share Nomination Form
+Distribute the nomination form for open, public submission (self-nomination allowed for all categories except Lifetime Achievement and Unsung Hero) and, in parallel, conduct direct reachouts to potential individuals and organizations identified by the ASC, NRP, and partner hubs as strong candidates, so the process doesn't rely on self-nomination or visibility alone to surface the ecosystem's best contributors. 
+
+Required fields:
+Nominee name, organization, contact details
+Category selected (max. 2 categories per nominee, to prevent dilution)
+150–300 word impact statement
+Supporting evidence (links, documents, metrics, media)
+Nominator name and relationship to nominee
+Two reference contacts
+Step 3 — Eligibility Screening
+NRP checks each submission against category eligibility criteria within 5 business days of submission. Incomplete entries get a 72-hour window to add missing information before disqualification.
+Step 4 — Verification
+Verification Desk fact-checks quantitative claims (user numbers, revenue, funding, awards cited) and confirms nominee/organization legitimacy.
+Step 5 — Judging
+CJPs independently score eligible nominees using the category rubric. Scores are averaged across judges; outlier scores (>2 standard deviations from panel mean) are flagged for panel discussion rather than automatically dropped. In case of a tie, the tiebreaker would be the organization or individual with more quantifiable social impact
+Step 6 — Shortlisting
+Top 3–5 scorers per category are announced publicly as finalists ahead of the awards event.
+Step 7 — Final Selection & Ratification
+CJP recommendations go to the ASC for final ratification. ASC may request clarification but does not override panel scoring without documented cause.
+Step 8 — Awards Ceremony
+Winners announced and recognized at the NCS Enugu Innovation & Impact Awards 2026 ceremony.
+
+5. Scoring Rubric Template (Flagship Categories)
+/* Table presentation */
+Criterion
+Weight
+Score (1–10)
+Weighted Score
+Innovation / Originality
+varies by category
+
+
+
+
+Measurable Impact
+varies by category
+
+
+
+
+Leadership / Execution
+varies by category
+
+
+
+
+Sustainability / Scalability
+varies by category
+
+
+
+
+Ecosystem or Community Contribution
+varies by category
+
+
+
+
+Total
+100%
+
+
+
+
+
+
+Judges score independently; final category score = mean of all judge totals after removing declared conflicts.
+6. Eligibility Safeguards
+Geographic anchor: Nominee or nominating organization must have a demonstrable, current tie to Enugu State's tech ecosystem (residence, operations, origin, or sustained contribution).
+Time window: Unless otherwise stated, evidence must relate to activity within the last 24 months (exceptions: Lifetime Achievement, which requires a 10-year record).
+No self-nomination: Lifetime Achievement and Unsung Hero Recognition.
+Category limit: Maximum 2 category submissions per nominee to keep judging load and comparisons fair.
+Plagiarism/fraud clause: Any nominee found to have submitted false or materially misleading evidence is disqualified and may be barred from future editions.
+
+7. Suggested Timeline (Adjust to Actual Event Date)
+/* Table presentation */
+Milestone
+Duration
+Call for nominations opens
+
+
+Nomination window closes
+
+
+Eligibility screening
+
+
+Verification
+
+
+Judging
+
+
+Finalists announced
+
+
+ASC ratification
+
+
+Awards ceremony
+
+
+
+
+This is a working framework. Categories, weightings, and timelines can be adjusted by the Awards Steering Committee before the official call for nominations is published.

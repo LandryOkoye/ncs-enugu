@@ -60,11 +60,11 @@ export default function RegisterPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/60 via-transparent to-[#050505]" />
 
           {/* Top badge */}
-          <div className="absolute top-8 left-8 right-8">
+          {/* <div className="absolute top-8 left-8 right-8">
             <span className="inline-block px-3 py-1.5 rounded-full bg-[#c59d5f]/15 border border-[#c59d5f]/30 text-[#c59d5f] text-[10px] font-bold tracking-[0.2em] uppercase">
               NCS Enugu EIIA 2026
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Info block */}
