@@ -350,7 +350,7 @@ export function NominationForm() {
       if (!res.ok) throw new Error("server error")
       setSubmitted(true)
     } catch {
-      setError("Something went wrong. Please try again or contact enugustatechapter@ncs.org.ng.")
+      setError("Something went wrong. Please reload your browser and try again or contact info@ncsenugu.org.")
     } finally {
       setLoading(false)
     }
@@ -846,12 +846,6 @@ export function NominationForm() {
                       checked={confirmAccuracy}
                       onChange={setConfirmAccuracy}
                       label="I confirm that the information provided is accurate to the best of my knowledge."
-                    />
-                    <ConsentCheck
-                      id="confirmConsent"
-                      checked={confirmConsent}
-                      onChange={setConfirmConsent}
-                      label="I confirm that the nominee is aware of and consents to this nomination."
                     />
                   </div>
                 </Field>

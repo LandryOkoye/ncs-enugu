@@ -139,7 +139,7 @@ export function RegistrationForm() {
       if (!res.ok) throw new Error("server error")
       setSubmitted(true)
     } catch {
-      setError("Something went wrong. Please try again or contact enugustatechapter@ncs.org.ng.")
+      setError("Something went wrong. Please reload your browser and try again or contact info@ncsenugu.org.")
     } finally {
       setLoading(false)
     }
